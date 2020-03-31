@@ -1,0 +1,7 @@
+#Sun Nov 19 14:29:45 CST 2017
+base.0=/media/mitlab-louis/ubutnu_disk/worksapce/Android-project/USBeaconSample_AverageRSSI_Text_EE1_V6/USBeaconSample/app/build/intermediates/transforms/dex/debug/folders/1000/2/thlutil_03196968826d33949fe932a24f7f6939fd03d0a5
+renamed.1=classes.dex
+renamed.0=classes2.dex
+file.1=/media/mitlab-louis/ubutnu_disk/worksapce/Android-project/USBeaconSample_AverageRSSI_Text_EE1_V6/USBeaconSample/app/build/intermediates/transforms/dex/debug/folders/1000/2/libusbeaconapp_5e499388a787502642ed7a634359374136bf6254/classes.dex
+base.1=/media/mitlab-louis/ubutnu_disk/worksapce/Android-project/USBeaconSample_AverageRSSI_Text_EE1_V6/USBeaconSample/app/build/intermediates/transforms/dex/debug/folders/1000/2/libusbeaconapp_5e499388a787502642ed7a634359374136bf6254
+file.0=/media/mitlab-louis/ubutnu_disk/worksapce/Android-project/USBeaconSample_AverageRSSI_Text_EE1_V6/USBeaconSample/app/build/intermediates/transforms/dex/debug/folders/1000/2/thlutil_03196968826d33949fe932a24f7f6939fd03d0a5/classes.dex

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical">
+
+
+	<FrameLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent">
+
+			<ListView
+				android:id="@+id/myListView"
+				android:layout_width="match_parent"
+				android:layout_height="607dp"
+				android:background="#000000"
+				android:divider="#55FFFFFF"
+				android:dividerHeight="2dp"
+				android:paddingLeft="10dp"
+				android:paddingRight="10dp"
+				android:scrollbars="vertical"
+				android:visibility="visible">
+			</ListView>
+
+
+		</LinearLayout>
+
+		<ImageView
+			android:id="@+id/map"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="400px"
+			android:src="@drawable/floor_3rd_2"
+			android:contentDescription="TODO" />
+		<Button
+			android:id="@+id/button2"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="1000px"
+			android:text="按鍵"
+			android:textColor="@android:color/holo_orange_dark"
+			android:onClick="buttonOnClick" />
+
+		<ImageView
+			android:id="@+id/map_mark"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="560px"
+			android:layout_marginTop="430px"
+			android:src="@drawable/map_mark"/>
+
+		<ImageView
+			android:id="@+id/red_map_mark"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:src="@drawable/red_map_mark"
+			android:layout_marginLeft="560px"
+			android:layout_marginTop="430px"
+			android:visibility="invisible"/>
+
+
+		<![CDATA[
+		android:text="Button" />
+	]]>
+	</FrameLayout>
+
+</LinearLayout>

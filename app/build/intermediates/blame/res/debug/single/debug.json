@@ -1,0 +1,90 @@
+[
+    {
+        "merged": "D:\\abc\\DataCollector\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_map_01_lobby.png.flat",
+        "source": "D:\\abc\\DataCollector\\app\\src\\main\\res\\drawable-xxhdpi\\map_01_lobby.png"
+    },
+    {
+        "merged": "D:\\abc\\DataCollector\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_map_02_office_all.png.flat",
+        "source": "D:\\abc\\DataCollector\\app\\src\\main\\res\\drawable-xxhdpi\\map_02_office_all.png"
+    },
+    {
+        "merged": "D:\\abc\\DataCollector\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_floor_3rd.PNG.flat",
+        "source": "D:\\abc\\DataCollector\\app\\src\\main\\res\\drawable-xxhdpi\\floor_3rd.PNG"
+    },
+    {
+        "merged": "D:\\abc\\DataCollector\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_map_05_room3.png.flat",
+        "source": "D:\\abc\\DataCollector\\app\\src\\main\\res\\drawable-xxhdpi\\map_05_room3.png"
+    },
+    {
+        "merged": "D:\\abc\\DataCollector\\app\\build\\intermediates\\res\\merged\\debug\\layout_beacon_data.xml.flat",
+        "source": "D:\\abc\\DataCollector\\app\\src\\main\\res\\layout\\beacon_data.xml"
+    },
+    {
+        "merged": "D:\\abc\\DataCollector\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "D:\\abc\\DataCollector\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "D:\\abc\\DataCollector\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_red_map_mark.png.flat",
+        "source": "D:\\abc\\DataCollector\\app\\src\\main\\res\\drawable-xxhdpi\\red_map_mark.png"
+    },
+    {
+        "merged": "D:\\abc\\DataCollector\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "D:\\abc\\DataCollector\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\abc\\DataCollector\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "D:\\abc\\DataCollector\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "D:\\abc\\DataCollector\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
+        "source": "D:\\abc\\DataCollector\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\abc\\DataCollector\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_map_mark.png.flat",
+        "source": "D:\\abc\\DataCollector\\app\\src\\main\\res\\drawable-xxhdpi\\map_mark.png"
+    },
+    {
+        "merged": "D:\\abc\\DataCollector\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "D:\\abc\\DataCollector\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "D:\\abc\\DataCollector\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "D:\\abc\\DataCollector\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "D:\\abc\\DataCollector\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "D:\\abc\\DataCollector\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\abc\\DataCollector\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_map_03_room1.png.flat",
+        "source": "D:\\abc\\DataCollector\\app\\src\\main\\res\\drawable-xxhdpi\\map_03_room1.png"
+    },
+    {
+        "merged": "D:\\abc\\DataCollector\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_map_04_room2.png.flat",
+        "source": "D:\\abc\\DataCollector\\app\\src\\main\\res\\drawable-xxhdpi\\map_04_room2.png"
+    },
+    {
+        "merged": "D:\\abc\\DataCollector\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "D:\\abc\\DataCollector\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "D:\\abc\\DataCollector\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "D:\\abc\\DataCollector\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\abc\\DataCollector\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ntust.png.flat",
+        "source": "D:\\abc\\DataCollector\\app\\src\\main\\res\\drawable-xxhdpi\\ntust.png"
+    },
+    {
+        "merged": "D:\\abc\\DataCollector\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "D:\\abc\\DataCollector\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\abc\\DataCollector\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_floor_3rd_2.jpg.flat",
+        "source": "D:\\abc\\DataCollector\\app\\src\\main\\res\\drawable-xxhdpi\\floor_3rd_2.jpg"
+    },
+    {
+        "merged": "D:\\abc\\DataCollector\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
+        "source": "D:\\abc\\DataCollector\\app\\src\\main\\res\\layout\\activity_main.xml"
+    }
+]

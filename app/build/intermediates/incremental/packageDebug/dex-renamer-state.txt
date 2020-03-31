@@ -1,0 +1,7 @@
+#Sun Nov 19 14:29:45 CST 2017
+base.0=/media/mitlab-louis/ubutnu_disk/worksapce/Android-project/USBeaconSample_AverageRSSI_Text_EE1_V6/USBeaconSample/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_a974da521002ca00a2657d1f94ad19056ce3e920
+renamed.1=classes.dex
+renamed.0=classes2.dex
+file.1=/media/mitlab-louis/ubutnu_disk/worksapce/Android-project/USBeaconSample_AverageRSSI_Text_EE1_V6/USBeaconSample/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_25acce322bf4f74e60725c1ac4d798a3c406935b/classes.dex
+base.1=/media/mitlab-louis/ubutnu_disk/worksapce/Android-project/USBeaconSample_AverageRSSI_Text_EE1_V6/USBeaconSample/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_25acce322bf4f74e60725c1ac4d798a3c406935b
+file.0=/media/mitlab-louis/ubutnu_disk/worksapce/Android-project/USBeaconSample_AverageRSSI_Text_EE1_V6/USBeaconSample/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_a974da521002ca00a2657d1f94ad19056ce3e920/classes.dex

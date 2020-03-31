@@ -1,0 +1,4 @@
+#Sun Nov 19 14:29:45 CST 2017
+base.0=/media/mitlab-louis/ubutnu_disk/worksapce/Android-project/USBeaconSample_AverageRSSI_Text_EE1_V6/USBeaconSample/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_4
+renamed.0=classes.dex
+file.0=/media/mitlab-louis/ubutnu_disk/worksapce/Android-project/USBeaconSample_AverageRSSI_Text_EE1_V6/USBeaconSample/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_4/classes.dex

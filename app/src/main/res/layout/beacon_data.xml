@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center">
+    
+    <Space android:layout_width="match_parent" android:layout_height="3dp"/>
+    
+    <TextView
+        android:id="@+id/it3_text1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:textColor="#FFFFFFFF"
+        android:textStyle="bold"
+		android:gravity="left|center_vertical"/>
+ 
+    <Space android:layout_width="match_parent" android:layout_height="5dp"/>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+		android:weightSum="720"
+        android:orientation="horizontal"
+        android:gravity="left|center_vertical">
+    	
+        <TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:paddingLeft="2dp"
+	        android:singleLine="true"
+	        android:text="Major : "
+	        android:textColor="#CCFFFFFF"
+			android:gravity="left|center_vertical"/>
+        
+	    <TextView
+	        android:id="@+id/it3_text2"
+	        android:layout_width="0dp"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="220"
+	        android:singleLine="true"
+	        android:textColor="#CCFFFFFF"
+			android:gravity="center"/>
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:paddingLeft="2dp"
+			android:singleLine="true"
+			android:text="Minor : "
+			android:textColor="#CCFFFFFF"
+			android:gravity="left|center_vertical"/>
+
+		<TextView
+			android:id="@+id/it3_text3"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="220"
+			android:singleLine="true"
+			android:textColor="#CCFFFFFF"
+			android:gravity="center"/>
+    </LinearLayout>
+    
+    <Space android:layout_width="match_parent" android:layout_height="5dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+		android:weightSum="720"
+        android:orientation="horizontal"
+        android:gravity="left|center_vertical">
+    	
+        <TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:paddingLeft="2dp"
+	        android:singleLine="true"
+	        android:text="rssi : "
+	        android:textColor="#CCFFFFFF"
+	        android:gravity="left|center_vertical"/>
+
+	    <TextView
+	        android:id="@+id/it3_text4"
+	        android:layout_width="0dp"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="220"
+	        android:singleLine="true"
+	        android:textColor="#CCFFFFFF"
+	        android:gravity="center"/>
+	    
+	    <TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:paddingLeft="2dp"
+	        android:singleLine="true"
+	        android:text="battery power : "
+	        android:textColor="#CCFFFFFF"
+	        android:gravity="left|center_vertical"/>
+	    
+	    <TextView
+	        android:id="@+id/it3_text5"
+	        android:layout_width="0dp"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="220"
+	        android:singleLine="true"
+	        android:textColor="#CCFFFFFF"
+	        android:gravity="center"/>
+//////////////////////////////////////////////
+
+		<TextView
+			android:id="@+id/it3_text6"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="220"
+			android:gravity="center"
+			android:singleLine="true"
+			android:textColor="@android:color/holo_green_dark" />
+/////////////////////////////////////////////
+	</LinearLayout>
+	
+    <Space android:layout_width="match_parent" android:layout_height="5dp"/>
+</LinearLayout>

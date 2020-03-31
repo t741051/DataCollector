@@ -1,0 +1,4 @@
+#Thu May 31 18:01:43 CST 2018
+base.0=/Users/guoyucheng/AndroidStudioProjects/DataCollector/app/build/intermediates/transforms/dexMerger/debug/19
+path.0=classes.dex
+renamed.0=classes.dex

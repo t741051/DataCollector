@@ -1,0 +1,5 @@
+<resources>
+    <!-- Application name. -->
+    <string name="app_name">行動裝置藍牙訊號擷取實作</string>
+    <string name="buttonOnClickMessage">123456789</string>
+</resources>

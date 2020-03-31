@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/media/mitlab-louis/ubutnu_disk/worksapce/Android-project/USBeaconSample_AverageRSSI_Text_EE1_V6/USBeaconSample/app/libs/libusbeaconapp.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b8b81d38ac839e48e2d356804afab81f488a7307">
+        <dex dex="/media/mitlab-louis/ubutnu_disk/worksapce/Android-project/USBeaconSample_AverageRSSI_Text_EE1_V6/USBeaconSample/app/build/intermediates/transforms/dex/debug/folders/1000/2/libusbeaconapp_5e499388a787502642ed7a634359374136bf6254/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/media/mitlab-louis/ubutnu_disk/worksapce/Android-project/USBeaconSample_AverageRSSI_Text_EE1_V6/USBeaconSample/app/libs/thlutil.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d6bb49054a938167d5b4128880e1ab07dae22e52">
+        <dex dex="/media/mitlab-louis/ubutnu_disk/worksapce/Android-project/USBeaconSample_AverageRSSI_Text_EE1_V6/USBeaconSample/app/build/intermediates/transforms/dex/debug/folders/1000/2/thlutil_03196968826d33949fe932a24f7f6939fd03d0a5/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/media/mitlab-louis/ubutnu_disk/worksapce/Android-project/USBeaconSample_AverageRSSI_Text_EE1_V6/USBeaconSample/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="5f218eff49cfa719b20b5e8bd77b48374d4d6fe2">
+        <dex dex="/media/mitlab-louis/ubutnu_disk/worksapce/Android-project/USBeaconSample_AverageRSSI_Text_EE1_V6/USBeaconSample/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_25acce322bf4f74e60725c1ac4d798a3c406935b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/media/mitlab-louis/ubutnu_disk/worksapce/Android-project/USBeaconSample_AverageRSSI_Text_EE1_V6/USBeaconSample/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
+        <dex dex="/media/mitlab-louis/ubutnu_disk/worksapce/Android-project/USBeaconSample_AverageRSSI_Text_EE1_V6/USBeaconSample/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_a974da521002ca00a2657d1f94ad19056ce3e920/classes.dex" />
+    </item>
+
+</items>
