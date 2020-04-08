@@ -25,48 +25,49 @@
 				android:paddingLeft="10dp"
 				android:paddingRight="10dp"
 				android:scrollbars="vertical"
-				android:visibility="visible">
-			</ListView>
+				android:visibility="visible"></ListView>
 
 
 		</LinearLayout>
 
-		<ImageView
-			android:id="@+id/map"
-			android:layout_width="match_parent"
-			android:layout_height="wrap_content"
-			android:layout_marginTop="400px"
-			android:src="@drawable/floor_3rd_2"
-			android:contentDescription="TODO" />
 		<Button
 			android:id="@+id/button2"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
 			android:layout_marginTop="1000px"
+			android:onClick="buttonOnClick"
 			android:text="按鍵"
-			android:textColor="@android:color/holo_orange_dark"
-			android:onClick="buttonOnClick" />
+			android:textColor="@android:color/holo_orange_dark" />
 
 		<ImageView
-			android:id="@+id/map_mark"
-			android:layout_width="wrap_content"
+			android:id="@+id/map"
+			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
-			android:layout_marginLeft="560px"
-			android:layout_marginTop="430px"
-			android:src="@drawable/map_mark"/>
+			android:layout_marginTop="300px"
+			android:src="@drawable/floor_3rd_2"
+			android:visibility="invisible" />
 
-		<ImageView
-			android:id="@+id/red_map_mark"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:src="@drawable/red_map_mark"
-			android:layout_marginLeft="560px"
-			android:layout_marginTop="430px"
-			android:visibility="invisible"/>
+		<FrameLayout
+			android:id="@+id/frame_layout_1"
+			android:layout_width="match_parent"
+			android:layout_height="300dp"
+			android:layout_marginTop="100dp"
+			android:background="@drawable/floor_3rd_2">
+
+			<ImageView
+				android:id="@+id/img_map_mark"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:src="@android:color/transparent" />
+		</FrameLayout><![CDATA[
 
 
-		<![CDATA[
+
+
+
 		android:text="Button" />
+
+
 	]]>
 	</FrameLayout>
 

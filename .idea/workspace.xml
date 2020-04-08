@@ -11,7 +11,19 @@
     <option name="TOOL_WINDOW_REGEXP_FILTER" value="false" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bc6cde2b-956c-4d3f-b7c0-c24ce7448667" name="Default" comment="" />
+    <list default="true" id="bc6cde2b-956c-4d3f-b7c0-c24ce7448667" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/mitlab/zusliu/User/Interface/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/mitlab/zusliu/User/Interface/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/build/classes/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,6 +34,7 @@
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="GBAZCY071339PND" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -47,52 +60,53 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mitlab/zusliu/Update/List/View/ListAdapter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="840">
-              <caret line="46" column="42" selection-start-line="46" selection-start-column="42" selection-end-line="46" selection-end-column="42" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/beacon_data.xml">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
           <provider selected="true" editor-type-id="android-designer2" />
           <provider editor-type-id="text-editor">
-            <state relative-caret-position="2457">
-              <caret line="117" column="36" selection-start-line="117" selection-start-column="32" selection-end-line="117" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-          <provider editor-type-id="android-designer2" />
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="735">
-              <caret line="35" column="47" selection-start-line="35" selection-start-column="47" selection-end-line="35" selection-end-column="47" />
+            <state relative-caret-position="189">
+              <caret line="49" column="8" selection-start-line="49" selection-start-column="8" selection-end-line="49" selection-end-column="8" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-          <provider editor-type-id="android-manifest" />
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="756">
-              <caret line="36" column="22" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="22" />
+            <state relative-caret-position="819">
+              <caret line="39" column="11" lean-forward="true" selection-start-line="39" selection-start-column="11" selection-end-line="39" selection-end-column="11" />
             </state>
           </provider>
+          <provider editor-type-id="android-manifest" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mitlab/zusliu/User/Interface/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1407">
-              <caret line="116" column="22" selection-start-line="116" selection-start-column="22" selection-end-line="116" selection-end-column="22" />
+            <state relative-caret-position="1512">
+              <caret line="236" column="13" selection-start-line="236" selection-start-column="13" selection-end-line="236" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#6029#7119#0" expanded="true" />
+                <element signature="e#7118#7119#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mitlab/zusliu/Update/List/View/ListItem.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="346">
+              <caret line="21" column="16" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mitlab/zusliu/User/Interface/ScannedBeacon.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="462">
+              <caret line="22" column="20" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -140,7 +154,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>ScannedBeacon</find>
       <find>check</find>
       <find>notification</find>
       <find>url</find>
@@ -155,7 +168,13 @@
       <find>button</find>
       <find>buttonOnClick</find>
       <find>R.</find>
+      <find>ScannedBeacon</find>
+      <find>setBackgroundColor</find>
+      <find>distance</find>
     </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -184,16 +203,15 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="width" value="1304" />
-    <option name="height" value="750" />
+    <option name="x" value="-10" />
+    <option name="width" value="978" />
+    <option name="height" value="1038" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -246,16 +264,36 @@
               <item name="zusliu" type="462c0819:PsiDirectoryNode" />
               <item name="Interface" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="DataCollector" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DataCollector" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DataCollector" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DataCollector" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+              <item name="drawable-xxhdpi" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="GBAZCY071339PND" />
     <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2020-03-21T08:01:12.070Z" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
     <property name="device.picker.selection" value="HT45HWM06657" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -392,7 +430,7 @@
     <frame x="-7" y="-7" width="1488" height="803" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21997207" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.21298882" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Build Variants" order="2" side_tool="true" weight="0.32960895" />
       <window_info id="Capture Tool" order="3" />
@@ -403,16 +441,16 @@
       <window_info id="Resources Explorer" order="8" weight="0.32960895" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32986626" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32838038" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32738096" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Android Profiler" order="6" show_stripe_button="false" weight="0.32986626" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.502095" side_tool="true" weight="0.3358098" />
+      <window_info anchor="bottom" id="Android Profiler" order="6" weight="0.32986626" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5027933" side_tool="true" weight="0.2217262" />
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49930167" weight="0.32986626" />
-      <window_info anchor="bottom" id="Logcat" order="10" sideWeight="0.49720672" weight="0.47102526" />
-      <window_info anchor="bottom" id="Build" order="11" sideWeight="0.49790502" visible="true" weight="0.3358098" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49930167" weight="0.32886904" />
+      <window_info anchor="bottom" id="Logcat" order="10" sideWeight="0.49720672" weight="0.4702381" />
+      <window_info anchor="bottom" id="Build" order="11" sideWeight="0.49720672" weight="0.17384844" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.32894737" />
       <window_info anchor="bottom" id="TODO" order="13" weight="0.32894737" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -427,7 +465,7 @@
       <window_info anchor="right" id="Assistant" order="9" weight="0.32960895" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.21997207" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.21298882" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Build Variants" order="2" side_tool="true" weight="0.32960895" />
       <window_info id="Capture Tool" order="3" />
@@ -438,16 +476,16 @@
       <window_info id="Resources Explorer" order="8" weight="0.32960895" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32986626" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32838038" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32738096" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Android Profiler" order="6" show_stripe_button="false" weight="0.32986626" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.502095" side_tool="true" weight="0.3358098" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5027933" side_tool="true" weight="0.2217262" />
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49930167" weight="0.32986626" />
-      <window_info anchor="bottom" id="Logcat" order="10" sideWeight="0.49720672" weight="0.47102526" />
-      <window_info anchor="bottom" id="Build" order="11" sideWeight="0.49790502" visible="true" weight="0.3358098" />
+      <window_info anchor="bottom" id="Logcat" order="10" sideWeight="0.49720672" weight="0.4702381" />
+      <window_info anchor="bottom" id="Build" order="11" sideWeight="0.49720672" visible="true" weight="0.17384844" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.32894737" />
       <window_info anchor="bottom" id="TODO" order="13" weight="0.32894737" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -459,6 +497,7 @@
       <window_info anchor="right" id="Theme Preview" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Preview" order="8" />
+      <window_info anchor="right" id="Assistant" order="9" weight="0.32960895" />
     </layout-to-restore>
   </component>
   <component name="editorHistoryManager">
@@ -528,20 +567,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/app/libs/libusbeaconapp.jar!/com/THLight/USBeacon/App/Lib/iBeaconData.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="85" column="62" selection-start-line="85" selection-start-column="62" selection-end-line="85" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mitlab/zusliu/User/Interface/ScannedBeacon.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/test/bench/_TestBench.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
@@ -558,17 +583,6 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/map_mark.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="jar://D:/Android/Sdk/platforms/android-26/android.jar!/android/widget/ImageView.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-248">
-          <caret line="231" column="39" selection-start-line="231" selection-start-column="34" selection-end-line="231" selection-end-column="39" />
-          <folding>
-            <element signature="e#6522#6523#0" expanded="true" />
-            <element signature="e#6573#6574#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="63">
@@ -576,17 +590,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mitlab/zusliu/Update/List/View/ListItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="452">
-          <caret line="26" column="26" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mitlab/zusliu/Update/List/View/ListAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="840">
           <caret line="46" column="42" selection-start-line="46" selection-start-column="42" selection-end-line="46" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Android/Sdk/platforms/android-26/android.jar!/android/view/View.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="1581" column="16" selection-start-line="1581" selection-start-column="16" selection-end-line="1581" selection-end-column="16" />
+          <folding>
+            <element signature="e#47446#47447#0" expanded="true" />
+            <element signature="e#47497#47498#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -598,19 +616,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider editor-type-id="android-designer2" />
+    <entry file="jar://$PROJECT_DIR$/app/libs/libusbeaconapp.jar!/com/THLight/USBeacon/App/Lib/iBeaconData.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="35" column="47" selection-start-line="35" selection-start-column="47" selection-end-line="35" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="756">
-          <caret line="36" column="22" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="22" />
+        <state relative-caret-position="273">
+          <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -638,12 +647,51 @@
     <entry file="file://$PROJECT_DIR$/settings.gradle">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider editor-type-id="android-manifest" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="819">
+          <caret line="39" column="11" lean-forward="true" selection-start-line="39" selection-start-column="11" selection-end-line="39" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Android/Sdk/platforms/android-26/android.jar!/android/widget/ImageView.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="24" column="11" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="49" column="8" selection-start-line="49" selection-start-column="8" selection-end-line="49" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mitlab/zusliu/User/Interface/ScannedBeacon.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="22" column="20" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mitlab/zusliu/Update/List/View/ListItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="346">
+          <caret line="21" column="16" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mitlab/zusliu/User/Interface/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1407">
-          <caret line="116" column="22" selection-start-line="116" selection-start-column="22" selection-end-line="116" selection-end-column="22" />
+        <state relative-caret-position="1512">
+          <caret line="236" column="13" selection-start-line="236" selection-start-column="13" selection-end-line="236" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#6029#7119#0" expanded="true" />
+            <element signature="e#7118#7119#0" expanded="true" />
           </folding>
         </state>
       </provider>

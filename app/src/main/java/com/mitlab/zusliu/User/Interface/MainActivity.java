@@ -1,6 +1,7 @@
 package com.mitlab.zusliu.User.Interface;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -15,10 +16,13 @@ import android.app.Service;
 import android.bluetooth.BluetoothAdapter;
 import android.content.Intent;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 
 import android.widget.ListView;
@@ -37,7 +41,10 @@ import android.os.Vibrator;
 
 import system.config.Setup;
 
+//////////////////////////////////
+import android.view.ViewGroup.LayoutParams;
 
+///////////////////////////////////
 
 public class MainActivity extends Activity implements iBeaconScanManager.OniBeaconScan {
 
@@ -60,10 +67,13 @@ public class MainActivity extends Activity implements iBeaconScanManager.OniBeac
     // 參數：裝置清單(資料清單)
     public ArrayList<ScannedBeacon> beacons = new ArrayList<ScannedBeacon>();
 
-    public ImageView map_mark;
-    public ImageView red_map_mark;
-    public Button button;
 
+
+    //public Button button;
+    FrameLayout frame;
+    public ImageView [] map_mark_image = new ImageView[15];
+    public int [] mark_position_X = {600,560,600,600,530,260,480,380,380,280,480};
+    static int [] mark_position_Y = {30 ,110,180,285,420,400,480,420,320,320,300};
     // TODO 方法：主程式
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -90,24 +100,51 @@ public class MainActivity extends Activity implements iBeaconScanManager.OniBeac
         this.handler.sendEmptyMessageDelayed(Setup.REQ_UPDATE_BEACON, Setup.TIME_BEACON_UPDATE);
         // Step.07(初始化流程) 設定清單配置器
         this.l.setAdapter(this.ListAdapter);
+///////////////////////////////////////////////////////////////////////////////////
+        frame = new FrameLayout(this);
+        frame = (FrameLayout)findViewById(R.id.frame_layout_1);
 
-        this.button = (Button)findViewById(R.id.button2);
+        display_mark(11);
 
-        this.map_mark = (ImageView)findViewById(R.id.map_mark);
-        this.red_map_mark = (ImageView)findViewById(R.id.red_map_mark);
-
+///////////////////////////////////////////////////////////////////////////////////
     }
-
-    public void buttonOnClick(View v) {
+///////////////////////////////////////////////////////////////////////////////////測試
+     public void buttonOnClick(View v) {
         // 寫要做的事...
+         change_mark_default(1);
 
-        map_mark.setVisibility(View.VISIBLE);
-        red_map_mark.setVisibility(View.INVISIBLE);
+    }
+    public void display_mark(int x){
+        // TODO 方法：產生X個圖標
+        for(int i = 0;i < x;i++)
+        {
+            map_mark_image[i] = new ImageView(this);
+            map_mark_image[i].setImageResource(R.drawable.map_mark);
+            map_mark_image[i].setX(mark_position_X[i]);
+            map_mark_image[i].setY(mark_position_Y[i]);
+            frame.addView(map_mark_image[i]);
+            map_mark_image[i].getLayoutParams().height = 65;
+            map_mark_image[i].getLayoutParams().width = 65;
+        }
+    }
+    public void change_mark_to_red(int x){
+        // TODO 方法：選擇第X個 改變圖標
+        map_mark_image[x].setImageResource(R.drawable.red_map_mark);
+    }
+    public void change_mark_default(int x){
+        // TODO 方法：選擇第X個 改為預設圖標
+        map_mark_image[x].setImageResource(R.drawable.map_mark);
+    }
+    public void beacon_state(int major,int minor,int rssi){
+        if(-rssi < 60){
+            change_mark_to_red(major);
+        }else{
+            change_mark_default(major);
+        }
     }
 
-
-
-    // TODO 方法：活動處理器
+////////////////////////////////////////////////////////////////////////////////////
+// TODO 方法：活動處理器
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         switch (requestCode) {
@@ -151,15 +188,14 @@ public class MainActivity extends Activity implements iBeaconScanManager.OniBeac
 
     // TODO 方法：裝置掃描(掃描裝置變動)
     public void VerifyBeacons() {
-        //////////////////////////////////////////////
-        String distance = "";
-        //////////////////////////////////////////////
+
         for (int i = this.beacons.size() - 1; i >= 0; i--) {
             ScannedBeacon beacon = this.beacons.get(i);
 
             if ((System.currentTimeMillis() - beacon.lastUpdate) > Setup.TIME_BEACON_TIMEOUT) {
                 // Step.02(更新裝置背景執行流程) 移除清單
                 this.beacons.remove(i);
+
             }
         }
 
@@ -173,24 +209,13 @@ public class MainActivity extends Activity implements iBeaconScanManager.OniBeac
             item.setText1(String.valueOf(beacon.beaconUuid));
             item.setText2(String.valueOf(beacon.major));
             item.setText3(String.valueOf(beacon.minor));
-            ///////////////////////////////////////////////////////////////////////
-            //mem_rssi = (mem_rssi * smooth_rate) + (beacon.rssi * (1 - smooth_rate));
-            //item.setText4(String.valueOf(mem_rssi));
             item.setText4(String.valueOf(beacon.rssi));
             item.setText5(String.valueOf(beacon.batteryPower));
 
+            //item.setText6(position(beacon.major,beacon.minor,beacon.rssi));
+            beacon_state(beacon.major,beacon.minor,beacon.rssi);
             //////////////////////////////////////////////
-            if(-beacon.rssi > 60){
-                distance = "Far";
-                map_mark.setVisibility(View.VISIBLE);
-                red_map_mark.setVisibility(View.INVISIBLE);
-            }else{
-                distance = "Near";
-                map_mark.setVisibility(View.INVISIBLE);
-                red_map_mark.setVisibility(View.VISIBLE);
-            }
-            item.setText6(distance);
-            //////////////////////////////////////////////
+
             this.ListAdapter.addItem(item);
         }
 
@@ -210,7 +235,6 @@ public class MainActivity extends Activity implements iBeaconScanManager.OniBeac
                 beacon = _beacon;
                 break;
             }
-
         }
 
         if (beacon == null) {
