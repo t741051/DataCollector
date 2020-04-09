@@ -111,8 +111,6 @@ public class MainActivity extends Activity implements iBeaconScanManager.OniBeac
 ///////////////////////////////////////////////////////////////////////////////////測試
      public void buttonOnClick(View v) {
         // 寫要做的事...
-         change_mark_default(1);
-
     }
     public void display_mark(int x){
         // TODO 方法：產生X個圖標
@@ -127,19 +125,23 @@ public class MainActivity extends Activity implements iBeaconScanManager.OniBeac
             map_mark_image[i].getLayoutParams().width = 65;
         }
     }
-    public void change_mark_to_red(int x){
-        // TODO 方法：選擇第X個 改變圖標
-        map_mark_image[x].setImageResource(R.drawable.red_map_mark);
+    public void change_mark(int x,int state){
+        // TODO 方法：選擇第X個 改變圖標 0:黑色 1:紅色
+        switch(state){
+            case 0:
+                map_mark_image[x].setImageResource(R.drawable.map_mark);
+                break;
+            case 1:
+                map_mark_image[x].setImageResource(R.drawable.red_map_mark);
+                break;
+        }
     }
-    public void change_mark_default(int x){
-        // TODO 方法：選擇第X個 改為預設圖標
-        map_mark_image[x].setImageResource(R.drawable.map_mark);
-    }
+
     public void beacon_state(int major,int minor,int rssi){
         if(-rssi < 60){
-            change_mark_to_red(major);
+            change_mark(major,1);
         }else{
-            change_mark_default(major);
+            change_mark(major,0);
         }
     }
 
