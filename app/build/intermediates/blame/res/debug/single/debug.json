@@ -28,6 +28,10 @@
         "source": "D:\\abc\\DataCollector\\app\\src\\main\\res\\drawable-xxhdpi\\red_map_mark.png"
     },
     {
+        "merged": "D:\\abc\\DataCollector\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_red_marker.png.flat",
+        "source": "D:\\abc\\DataCollector\\app\\src\\main\\res\\drawable-xxhdpi\\red_marker.png"
+    },
+    {
         "merged": "D:\\abc\\DataCollector\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
         "source": "D:\\abc\\DataCollector\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
     },

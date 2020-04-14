@@ -21,6 +21,7 @@ import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.util.Log;
 import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
@@ -72,8 +73,16 @@ public class MainActivity extends Activity implements iBeaconScanManager.OniBeac
     //public Button button;
     FrameLayout frame;
     public ImageView [] map_mark_image = new ImageView[15];
-    public int [] mark_position_X = {600,560,600,600,530,260,480,380,380,280,480};
+    // 儲存地標位置
+    static int [] mark_position_X = {600,560,600,600,530,260,480,380,380,280,480};
     static int [] mark_position_Y = {30 ,110,180,285,420,400,480,420,320,320,300};
+    /*
+    static int [][] beacon_to_mark ={
+        {},
+        {}
+    };
+
+     */
     // TODO 方法：主程式
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -109,6 +118,33 @@ public class MainActivity extends Activity implements iBeaconScanManager.OniBeac
 ///////////////////////////////////////////////////////////////////////////////////
     }
 ///////////////////////////////////////////////////////////////////////////////////測試
+    public int correspod_beacon(int major,int minor){
+        int num;
+        if(major == 0 && minor == 6){
+            num = 0;
+        }else if(major == 1 && minor == 0){
+            num = 1;
+        }else if(major == 4 && minor == 1){
+            num = 2;
+        }else if(major == 4 && minor == 2){
+            num = 3;
+        }else if(major == 4 && minor == 3){
+            num = 4;
+        }else if(major == 8 && minor == 2){
+            num = 5;
+        }else if(major == 9 && minor == 1){
+            num = 6;
+        }else if(major == 9 && minor == 2){
+            num = 7;
+        }else if(major == 9 && minor == 3){
+            num = 8;
+        }else if(major == 10 && minor == 0){
+            num = 9;
+        }else{
+            num = 10;
+        }
+        return num;
+    }
      public void buttonOnClick(View v) {
         // 寫要做的事...
     }
@@ -128,20 +164,32 @@ public class MainActivity extends Activity implements iBeaconScanManager.OniBeac
     public void change_mark(int x,int state){
         // TODO 方法：選擇第X個 改變圖標 0:黑色 1:紅色
         switch(state){
+
             case 0:
+                Log.v("s_h_b", String.valueOf(map_mark_image[x].getLayoutParams().height));
+                map_mark_image[x].getLayoutParams().height = 65;
+                map_mark_image[x].getLayoutParams().width = 65;
                 map_mark_image[x].setImageResource(R.drawable.map_mark);
+                Log.v("e_h_b", String.valueOf(map_mark_image[x].getLayoutParams().height));
                 break;
             case 1:
+                Log.v("s_h_r", String.valueOf(map_mark_image[x].getLayoutParams().height));
+                map_mark_image[x].getLayoutParams().height = 190;
+                map_mark_image[x].getLayoutParams().width = 190;
+                //map_mark_image[x].setImageResource(R.drawable.red_map_mark);
                 map_mark_image[x].setImageResource(R.drawable.red_map_mark);
+                Log.v("e_h_r", String.valueOf(map_mark_image[x].getLayoutParams().height));
                 break;
+
+
         }
     }
 
     public void beacon_state(int major,int minor,int rssi){
         if(-rssi < 60){
-            change_mark(major,1);
+            change_mark(correspod_beacon(major,minor),1);
         }else{
-            change_mark(major,0);
+            change_mark(correspod_beacon(major,minor),0);
         }
     }
 
@@ -196,6 +244,7 @@ public class MainActivity extends Activity implements iBeaconScanManager.OniBeac
 
             if ((System.currentTimeMillis() - beacon.lastUpdate) > Setup.TIME_BEACON_TIMEOUT) {
                 // Step.02(更新裝置背景執行流程) 移除清單
+                change_mark(beacon.major,0);
                 this.beacons.remove(i);
 
             }
@@ -214,7 +263,7 @@ public class MainActivity extends Activity implements iBeaconScanManager.OniBeac
             item.setText4(String.valueOf(beacon.rssi));
             item.setText5(String.valueOf(beacon.batteryPower));
 
-            //item.setText6(position(beacon.major,beacon.minor,beacon.rssi));
+            //////////////////////////////////////////////
             beacon_state(beacon.major,beacon.minor,beacon.rssi);
             //////////////////////////////////////////////
 

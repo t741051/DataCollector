@@ -23,6 +23,7 @@ public final class R {
     public static final int map_mark=0x7f020007;
     public static final int ntust=0x7f020008;
     public static final int red_map_mark=0x7f020009;
+    public static final int red_marker=0x7f02000a;
   }
   public static final class id {
     public static final int button2=0x7f030000;
