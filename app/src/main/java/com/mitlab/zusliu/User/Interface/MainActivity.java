@@ -71,18 +71,17 @@ public class MainActivity extends Activity implements iBeaconScanManager.OniBeac
 
 
     //public Button button;
-    FrameLayout frame;
+    FrameLayout frame_1;
+    FrameLayout frame_2;
     public ImageView [] map_mark_image = new ImageView[15];
+    public Button [] button_function = new Button[5];
     // 儲存地標位置
     static int [] mark_position_X = {600,560,600,600,530,260,480,380,380,280,480};
     static int [] mark_position_Y = {30 ,110,180,285,420,400,480,420,320,320,300};
-    /*
-    static int [][] beacon_to_mark ={
-        {},
-        {}
-    };
 
-     */
+    static int [] btn_position_X = {0,100,0};
+    static int [] btn_position_Y = {0,0,100};
+    static int [] beacon_state_1 = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
     // TODO 方法：主程式
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -110,9 +109,10 @@ public class MainActivity extends Activity implements iBeaconScanManager.OniBeac
         // Step.07(初始化流程) 設定清單配置器
         this.l.setAdapter(this.ListAdapter);
 ///////////////////////////////////////////////////////////////////////////////////
-        frame = new FrameLayout(this);
-        frame = (FrameLayout)findViewById(R.id.frame_layout_1);
-
+        frame_1 = new FrameLayout(this);
+        frame_1 = (FrameLayout)findViewById(R.id.frame_layout_1);
+        frame_2 = new FrameLayout(this);
+        frame_2 = (FrameLayout)findViewById(R.id.frame_layout_2);
         display_mark(11);
 
 ///////////////////////////////////////////////////////////////////////////////////
@@ -147,6 +147,20 @@ public class MainActivity extends Activity implements iBeaconScanManager.OniBeac
     }
      public void buttonOnClick(View v) {
         // 寫要做的事...
+         //display_btn(3);
+         change_mark(1,2);
+    }
+    public void display_btn(int x){
+        // TODO 方法：產生X個圖標
+        for(int i = 0;i < x;i++)
+        {
+            button_function[i] = new Button(this);
+            button_function[i].setX(btn_position_X[i]);
+            button_function[i].setY(btn_position_Y[i]);
+            frame_1.addView(button_function[i]);
+            button_function[i].getLayoutParams().height = 65;
+            button_function[i].getLayoutParams().width = 65;
+        }
     }
     public void display_mark(int x){
         // TODO 方法：產生X個圖標
@@ -156,7 +170,7 @@ public class MainActivity extends Activity implements iBeaconScanManager.OniBeac
             map_mark_image[i].setImageResource(R.drawable.map_mark);
             map_mark_image[i].setX(mark_position_X[i]);
             map_mark_image[i].setY(mark_position_Y[i]);
-            frame.addView(map_mark_image[i]);
+            frame_1.addView(map_mark_image[i]);
             map_mark_image[i].getLayoutParams().height = 65;
             map_mark_image[i].getLayoutParams().width = 65;
         }
@@ -174,23 +188,39 @@ public class MainActivity extends Activity implements iBeaconScanManager.OniBeac
                 break;
             case 1:
                 Log.v("s_h_r", String.valueOf(map_mark_image[x].getLayoutParams().height));
-                map_mark_image[x].getLayoutParams().height = 190;
-                map_mark_image[x].getLayoutParams().width = 190;
-                //map_mark_image[x].setImageResource(R.drawable.red_map_mark);
+                map_mark_image[x].getLayoutParams().height = 65;
+                map_mark_image[x].getLayoutParams().width = 65;
                 map_mark_image[x].setImageResource(R.drawable.red_map_mark);
                 Log.v("e_h_r", String.valueOf(map_mark_image[x].getLayoutParams().height));
                 break;
 
+            case 2:
+                Log.v("s_h_r", String.valueOf(map_mark_image[x].getLayoutParams().height));
+                map_mark_image[x].getLayoutParams().height = 65;
+                map_mark_image[x].getLayoutParams().width = 65;
+                map_mark_image[x].setImageResource(R.drawable.light_mark);
+                Log.v("e_h_r", String.valueOf(map_mark_image[x].getLayoutParams().height));
+                break;
+
+
 
         }
     }
+    /*
+    public void beacon_state_1(int major,int minor,int rssi){
+        if()
+    }
 
+     */
     public void beacon_state(int major,int minor,int rssi){
         if(-rssi < 60){
-            change_mark(correspod_beacon(major,minor),1);
+            beacon_state_1[correspod_beacon(major,minor)] = 1;
+            //change_mark(correspod_beacon(major,minor),1);
         }else{
-            change_mark(correspod_beacon(major,minor),0);
+            beacon_state_1[correspod_beacon(major,minor)] = 0;
+            //change_mark(correspod_beacon(major,minor),0);
         }
+
     }
 
 ////////////////////////////////////////////////////////////////////////////////////

@@ -30,15 +30,6 @@
 
 		</LinearLayout>
 
-		<Button
-			android:id="@+id/button2"
-			android:layout_width="match_parent"
-			android:layout_height="wrap_content"
-			android:layout_marginTop="1000px"
-			android:onClick="buttonOnClick"
-			android:text="按鍵"
-			android:textColor="@android:color/holo_orange_dark" />
-
 		<ImageView
 			android:id="@+id/map"
 			android:layout_width="match_parent"
@@ -59,6 +50,22 @@
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:src="@android:color/transparent" />
+
+		</FrameLayout>
+
+		<FrameLayout
+			android:id="@+id/frame_layout_2"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent">
+
+			<Button
+				android:id="@+id/button2"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="1000px"
+				android:onClick="buttonOnClick"
+				android:text="按鍵"
+				android:textColor="@android:color/holo_orange_dark" />
 		</FrameLayout><![CDATA[
 
 
