@@ -8,12 +8,8 @@
         "source": "D:\\abc\\DataCollector\\app\\src\\main\\res\\drawable-xxhdpi\\map_02_office_all.png"
     },
     {
-        "merged": "D:\\abc\\DataCollector\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_floor_3rd.PNG.flat",
-        "source": "D:\\abc\\DataCollector\\app\\src\\main\\res\\drawable-xxhdpi\\floor_3rd.PNG"
-    },
-    {
-        "merged": "D:\\abc\\DataCollector\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_map_05_room3.png.flat",
-        "source": "D:\\abc\\DataCollector\\app\\src\\main\\res\\drawable-xxhdpi\\map_05_room3.png"
+        "merged": "D:\\abc\\DataCollector\\app\\build\\intermediates\\res\\merged\\debug\\drawable_button_round_style.xml.flat",
+        "source": "D:\\abc\\DataCollector\\app\\src\\main\\res\\drawable\\button_round_style.xml"
     },
     {
         "merged": "D:\\abc\\DataCollector\\app\\build\\intermediates\\res\\merged\\debug\\layout_beacon_data.xml.flat",
@@ -80,12 +76,20 @@
         "source": "D:\\abc\\DataCollector\\app\\src\\main\\res\\drawable-xxhdpi\\ntust.png"
     },
     {
-        "merged": "D:\\abc\\DataCollector\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
-        "source": "D:\\abc\\DataCollector\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
-    },
-    {
         "merged": "D:\\abc\\DataCollector\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_floor_3rd_2.jpg.flat",
         "source": "D:\\abc\\DataCollector\\app\\src\\main\\res\\drawable-xxhdpi\\floor_3rd_2.jpg"
+    },
+    {
+        "merged": "D:\\abc\\DataCollector\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_floor_3rd.PNG.flat",
+        "source": "D:\\abc\\DataCollector\\app\\src\\main\\res\\drawable-xxhdpi\\floor_3rd.PNG"
+    },
+    {
+        "merged": "D:\\abc\\DataCollector\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_map_05_room3.png.flat",
+        "source": "D:\\abc\\DataCollector\\app\\src\\main\\res\\drawable-xxhdpi\\map_05_room3.png"
+    },
+    {
+        "merged": "D:\\abc\\DataCollector\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "D:\\abc\\DataCollector\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
     },
     {
         "merged": "D:\\abc\\DataCollector\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",

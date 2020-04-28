@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 按壓時 -->
+    <item android:state_pressed="true">
+        <shape android:shape="oval">
+            <!--    <corners android:radius="60dip" /> -->
+            <size android:height="50dip"
+                  android:width="50dip"
+            />
+            <!--邊框-->
+            <stroke android:width="1dip" android:color="#FFFFFF" />
+            <solid android:color="@android:color/darker_gray" />
+            <!--    <gradient android:angle="-90" android:startColor="#0099CC" android:endColor="#FFFFFF"  />   -->
+        </shape>
+    </item>
+
+    <!-- 預設時 -->
+    <item android:color="@android:color/black">
+        <shape android:shape="oval"  >
+            <size android:height="65dip"
+                android:width="50dip"
+            />
+            <solid android:color="@android:color/black" />
+            <!--    <gradient android:angle="-90" android:startColor="#0E2252" android:endColor="#FFFFFF"  />   -->
+        </shape>
+    </item>
+
+</selector>

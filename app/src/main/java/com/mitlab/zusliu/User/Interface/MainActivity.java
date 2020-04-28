@@ -18,6 +18,7 @@ import android.content.Intent;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -71,18 +72,19 @@ public class MainActivity extends Activity implements iBeaconScanManager.OniBeac
 
 
     //public Button button;
-    FrameLayout frame;
+    FrameLayout frame_1;
+    FrameLayout frame_2;
     public ImageView [] map_mark_image = new ImageView[15];
+    Button btn_1,btn_2;
+    static boolean flag_btn = false;
+    static int [] beacon_state_1 = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
     // 儲存地標位置
     static int [] mark_position_X = {600,560,600,600,530,260,480,380,380,280,480};
     static int [] mark_position_Y = {30 ,110,180,285,420,400,480,420,320,320,300};
-    /*
-    static int [][] beacon_to_mark ={
-        {},
-        {}
-    };
-
-     */
+    static int [] beacon_num      = {  5, 81, 30, 41, 42, 43,  6, 82, 91, 92, 93};
+    static int choose_one = 0;    //只讓一個點顯示
+    static int pre_beacon = 0;
+    static int beacon_in  = 0;
     // TODO 方法：主程式
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -110,53 +112,76 @@ public class MainActivity extends Activity implements iBeaconScanManager.OniBeac
         // Step.07(初始化流程) 設定清單配置器
         this.l.setAdapter(this.ListAdapter);
 ///////////////////////////////////////////////////////////////////////////////////
-        frame = new FrameLayout(this);
-        frame = (FrameLayout)findViewById(R.id.frame_layout_1);
-
+        frame_1 = new FrameLayout(this);
+        frame_1 = (FrameLayout)findViewById(R.id.frame_layout_1);
+        frame_2 = new FrameLayout(this);
+        frame_2 = (FrameLayout)findViewById(R.id.frame_layout_2);
+        btn_1 = (Button)findViewById(R.id.button3);
+        btn_2 = (Button)findViewById(R.id.button4);
         display_mark(11);
 
 ///////////////////////////////////////////////////////////////////////////////////
     }
 ///////////////////////////////////////////////////////////////////////////////////測試
     public int correspod_beacon(int major,int minor){
+        beacon_in = major*10 + minor;
         int num;
-        if(major == 0 && minor == 6){
-            num = 0;
-        }else if(major == 1 && minor == 0){
-            num = 1;
-        }else if(major == 4 && minor == 1){
-            num = 2;
-        }else if(major == 4 && minor == 2){
-            num = 3;
-        }else if(major == 4 && minor == 3){
-            num = 4;
-        }else if(major == 8 && minor == 2){
-            num = 5;
-        }else if(major == 9 && minor == 1){
-            num = 6;
-        }else if(major == 9 && minor == 2){
-            num = 7;
-        }else if(major == 9 && minor == 3){
-            num = 8;
-        }else if(major == 10 && minor == 0){
-            num = 9;
-        }else{
-            num = 10;
+        for(num=0; num<=10; num++)
+        {
+            if( beacon_in == beacon_num[num]) break;
+            else {}
         }
         return num;
     }
      public void buttonOnClick(View v) {
         // 寫要做的事...
+
+        flag_btn = !flag_btn;
+        if(flag_btn == true){
+            btn_1.setVisibility(View.VISIBLE);
+            btn_2.setVisibility(View.VISIBLE);
+        }else{
+            btn_1.setVisibility(View.INVISIBLE);
+            btn_2.setVisibility(View.INVISIBLE);
+        }
+
+    }
+    public void buttonOnClick_1(View v) {
+        // 寫要做的事...
+        connect_to_web(0);
+    }
+    public void buttonOnClick_2(View v) {
+        // 寫要做的事...
+        connect_to_web(1);
+    }
+    public void connect_to_web(int a){
+        Uri uri = Uri.parse("https://www.google.com");
+        switch (a){
+            case 0:
+                uri = Uri.parse("https://www.google.com");
+                break;
+            case 1:
+                uri = Uri.parse("https://www.yahoo.com.tw");
+                break;
+        }
+
+        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+        startActivity(intent);
+    }
+    public void display_btn(int x){
+        // TODO 方法：產生X個圖標
+
     }
     public void display_mark(int x){
         // TODO 方法：產生X個圖標
         for(int i = 0;i < x;i++)
         {
+            
             map_mark_image[i] = new ImageView(this);
             map_mark_image[i].setImageResource(R.drawable.map_mark);
             map_mark_image[i].setX(mark_position_X[i]);
             map_mark_image[i].setY(mark_position_Y[i]);
-            frame.addView(map_mark_image[i]);
+            frame_1.addView(map_mark_image[i]);
             map_mark_image[i].getLayoutParams().height = 65;
             map_mark_image[i].getLayoutParams().width = 65;
         }
@@ -164,7 +189,6 @@ public class MainActivity extends Activity implements iBeaconScanManager.OniBeac
     public void change_mark(int x,int state){
         // TODO 方法：選擇第X個 改變圖標 0:黑色 1:紅色
         switch(state){
-
             case 0:
                 Log.v("s_h_b", String.valueOf(map_mark_image[x].getLayoutParams().height));
                 map_mark_image[x].getLayoutParams().height = 65;
@@ -174,23 +198,38 @@ public class MainActivity extends Activity implements iBeaconScanManager.OniBeac
                 break;
             case 1:
                 Log.v("s_h_r", String.valueOf(map_mark_image[x].getLayoutParams().height));
-                map_mark_image[x].getLayoutParams().height = 190;
-                map_mark_image[x].getLayoutParams().width = 190;
+                map_mark_image[x].getLayoutParams().height = 65;
+                map_mark_image[x].getLayoutParams().width = 65;
                 //map_mark_image[x].setImageResource(R.drawable.red_map_mark);
                 map_mark_image[x].setImageResource(R.drawable.red_map_mark);
                 Log.v("e_h_r", String.valueOf(map_mark_image[x].getLayoutParams().height));
                 break;
-
-
         }
     }
 
     public void beacon_state(int major,int minor,int rssi){
         if(-rssi < 60){
-            change_mark(correspod_beacon(major,minor),1);
-        }else{
-            change_mark(correspod_beacon(major,minor),0);
+            if(choose_one ==1){
+                /*if(pre_beacon != beacon_in) {
+                    change_mark(correspod_beacon(pre_beacon / 10, pre_beacon % 10), 0);
+                }
+                change_mark(correspod_beacon(major, minor), 1);
+                pre_beacon = beacon_in;*/
+            }
+            else {
+                choose_one = 1;
+                change_mark(correspod_beacon(major, minor), 1);
+                pre_beacon = beacon_in;
+            }
         }
+        else{
+            if(choose_one == 1){
+                choose_one = 0;
+                change_mark(correspod_beacon(major,minor),0);
+            }
+            else{}
+        }
+
     }
 
 ////////////////////////////////////////////////////////////////////////////////////
@@ -244,7 +283,9 @@ public class MainActivity extends Activity implements iBeaconScanManager.OniBeac
 
             if ((System.currentTimeMillis() - beacon.lastUpdate) > Setup.TIME_BEACON_TIMEOUT) {
                 // Step.02(更新裝置背景執行流程) 移除清單
-                change_mark(beacon.major,0);
+                change_mark(correspod_beacon(beacon.major,beacon.minor),0);
+                choose_one = 0;
+
                 this.beacons.remove(i);
 
             }
