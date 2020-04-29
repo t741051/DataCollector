@@ -94,5 +94,9 @@
     {
         "merged": "D:\\abc\\DataCollector\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
         "source": "D:\\abc\\DataCollector\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "D:\\abc\\DataCollector\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_light_mark.png.flat",
+        "source": "D:\\abc\\DataCollector\\app\\src\\main\\res\\drawable-xxhdpi\\light_mark.png"
     }
 ]
