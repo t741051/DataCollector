@@ -152,11 +152,15 @@ public class MainActivity extends Activity implements iBeaconScanManager.OniBeac
     //TODO 商家資訊按鍵
     public void buttonOnClick_1(View v) {
         // 寫要做的事...
-        connect_to_web(0);
+        if(flag_mark_btn[0] == false)
+            connect_to_web(0);
+        else
+            connect_to_web(1);
     }
     //TODO 地點標記按鍵
     public void buttonOnClick_2(View v) {
         // 寫要做的事...
+
         connect_to_web(1);
     }
     //TODO 連結到網站
