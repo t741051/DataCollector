@@ -64,6 +64,10 @@
         "source": "D:\\abc\\DataCollector\\app\\src\\main\\res\\drawable-xxhdpi\\map_04_room2.png"
     },
     {
+        "merged": "D:\\abc\\DataCollector\\app\\build\\intermediates\\res\\merged\\debug\\drawable_button_rectangle_style.xml.flat",
+        "source": "D:\\abc\\DataCollector\\app\\src\\main\\res\\drawable\\button_rectangle_style.xml"
+    },
+    {
         "merged": "D:\\abc\\DataCollector\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
         "source": "D:\\abc\\DataCollector\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
     },
@@ -94,6 +98,10 @@
     {
         "merged": "D:\\abc\\DataCollector\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
         "source": "D:\\abc\\DataCollector\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "D:\\abc\\DataCollector\\app\\build\\intermediates\\res\\merged\\debug\\xml_button_rectangle_style.xml.flat",
+        "source": "D:\\abc\\DataCollector\\app\\src\\main\\res\\xml\\button_rectangle_style.xml"
     },
     {
         "merged": "D:\\abc\\DataCollector\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_light_mark.png.flat",

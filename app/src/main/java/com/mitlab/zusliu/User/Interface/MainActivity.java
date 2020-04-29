@@ -80,7 +80,7 @@ public class MainActivity extends Activity implements iBeaconScanManager.OniBeac
     public ImageButton [] img_btn_mark = new ImageButton[15];
     static boolean flag_btn = false;    //"+"按鍵狀態
     static boolean [] flag_mark_btn = {false,false,false,false,false,false,false,false,false,false,false,false};
-    static int [] beacon_state_1 = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+    static int [] beacon_state_mem = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
     // 儲存地標位置
     static int [] mark_position_X = {600,560,600,600,530,260,480,380,380,280,480};
     static int [] mark_position_Y = {30 ,110,180,285,420,400,480,420,320,320,300};
@@ -123,8 +123,6 @@ public class MainActivity extends Activity implements iBeaconScanManager.OniBeac
         btn_2 = (Button)findViewById(R.id.button4);
         //display_mark(11);
         display_mark_btn(11);
-
-
 ///////////////////////////////////////////////////////////////////////////////////
     }
 ///////////////////////////////////////////////////////////////////////////////////測試
@@ -293,14 +291,12 @@ public class MainActivity extends Activity implements iBeaconScanManager.OniBeac
                 }
                 change_mark(correspod_beacon(major, minor), 1);
                 pre_beacon = beacon_in;*/
-            }
-            else {
+            }else{
                 choose_one = 1;
                 change_mark(correspod_beacon(major, minor), 1);
                 pre_beacon = beacon_in;
             }
-        }
-        else{
+        }else{
             /*
             if(choose_one == 1){
                 choose_one = 0;
@@ -318,9 +314,9 @@ public class MainActivity extends Activity implements iBeaconScanManager.OniBeac
 // TODO 方法：活動處理器
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        switch (requestCode) {
+        switch(requestCode){
             // turn on bluetooth device
-            case Setup.REQ_ENABLE_BT: {
+            case Setup.REQ_ENABLE_BT:{
                 if (resultCode == RESULT_OK) {/***/}
                 break;
             }
@@ -328,13 +324,13 @@ public class MainActivity extends Activity implements iBeaconScanManager.OniBeac
     }
 
     // TODO 方法：處理器(背景執行)
-    public Handler handler = new Handler() {
+    public Handler handler = new Handler(){
         @Override
-        public void handleMessage(Message msg) {
-            switch (msg.what) {
+        public void handleMessage(Message msg){
+            switch (msg.what){
                 // start beacon scanner
-                case Setup.REQ_SCAN_BEACON: {
-                    synchronized (ListAdapter) {
+                case Setup.REQ_SCAN_BEACON:{
+                    synchronized (ListAdapter){
                         // Step.01(啟動裝置背景執行流程) 呼叫方法：裝置掃描(掃描裝置訊號)(掃描裝置電池量)
                         scanner.startScaniBeacon(Setup.TIME_BEACON_START);
                         handler.sendEmptyMessageDelayed(Setup.REQ_SCAN_BEACON, Setup.TIME_BEACON_RESTART);
@@ -343,8 +339,8 @@ public class MainActivity extends Activity implements iBeaconScanManager.OniBeac
                 }
 
                 // update beacon status
-                case Setup.REQ_UPDATE_BEACON: {
-                    synchronized (ListAdapter) {
+                case Setup.REQ_UPDATE_BEACON:{
+                    synchronized (ListAdapter){
                         // Step.01(更新裝置背景執行流程) 呼叫方法：裝置掃描(掃描裝置變動)
                         VerifyBeacons();
 
@@ -358,12 +354,12 @@ public class MainActivity extends Activity implements iBeaconScanManager.OniBeac
     };
 
     // TODO 方法：裝置掃描(掃描裝置變動)
-    public void VerifyBeacons() {
+    public void VerifyBeacons(){
 
-        for (int i = this.beacons.size() - 1; i >= 0; i--) {
+        for(int i = this.beacons.size() - 1; i >= 0; i--){
             ScannedBeacon beacon = this.beacons.get(i);
 
-            if ((System.currentTimeMillis() - beacon.lastUpdate) > Setup.TIME_BEACON_TIMEOUT) {
+            if((System.currentTimeMillis() - beacon.lastUpdate) > Setup.TIME_BEACON_TIMEOUT){
                 // Step.02(更新裝置背景執行流程) 移除清單
             //////////////////////////////////////////////////////////////////////////////////////
                 change_mark(correspod_beacon(beacon.major,beacon.minor),0);
@@ -377,7 +373,7 @@ public class MainActivity extends Activity implements iBeaconScanManager.OniBeac
         this.ListAdapter.clearItem();
         // Step.03(更新裝置背景執行流程) 清除項目
 
-        for (ScannedBeacon beacon : this.beacons) {
+        for(ScannedBeacon beacon : this.beacons){
             // Step.03(更新裝置背景執行流程) 重新新增項目
             ListItem item = new ListItem();
 
@@ -395,28 +391,28 @@ public class MainActivity extends Activity implements iBeaconScanManager.OniBeac
         }
 
         // show beacons list for debug
-        if (Setup.FLAG_DEBUG) {
+        if(Setup.FLAG_DEBUG){
             Setup._tb.ShowBeaconsList(this.beacons);
         }
     }
 
     // TODO 方法：裝置掃描(掃描裝置訊號)
     @Override
-    public void onScaned(iBeaconData BeaconData) {
+    public void onScaned(iBeaconData BeaconData){
         ScannedBeacon beacon = null;
 
-        for (ScannedBeacon _beacon : this.beacons) {
-            if (_beacon.equals(BeaconData, false)) {
+        for(ScannedBeacon _beacon : this.beacons){
+            if(_beacon.equals(BeaconData, false)) {
                 beacon = _beacon;
                 break;
             }
         }
 
-        if (beacon == null) {
+        if(beacon == null){
             // Step.02(啟動裝置背景執行流程) 新增清單
             beacon = ScannedBeacon.copyOf(BeaconData);
             this.beacons.add(beacon);
-        } else {
+        }else{
             beacon.rssi = BeaconData.rssi;
         }
         check(BeaconData.major, BeaconData.minor, BeaconData.rssi);
@@ -429,14 +425,12 @@ public class MainActivity extends Activity implements iBeaconScanManager.OniBeac
     public void onBatteryPowerScaned(BatteryPowerData batteryPowerData) {
         for (int i = 0; i < this.beacons.size(); i++) {
             ScannedBeacon beacon = this.beacons.get(i);
-
             if (beacon.macAddress.equals(batteryPowerData.macAddress)) {
                 beacon.batteryPower = batteryPowerData.batteryPower;
                 this.beacons.set(i, beacon);
             }
         }
     }
-
 
     //TODO 方法：確認編號與距離
     public void check(int major, int minor, int rssi) {
@@ -448,30 +442,25 @@ public class MainActivity extends Activity implements iBeaconScanManager.OniBeac
                 map.put(1, rssi);
                 detector(rssi, 70, 80, "1");
                 break;
-
             case 2:
                 map.put(2, rssi);
                 detector(rssi, 70, 80, "2");
                 break;
-
             case 3:
                 map.put(3, rssi);
                 detector(rssi, 70, 80, "3");
                 break;
-
             case 4:
                 map.put(4, rssi);
                 detector(rssi, 70, 80, "4");
                 break;
-
             default:
                 break;
-
         }
     }
 
     //TODO 方法：通知震動,推播,回到app
-    public void detector(int distance, int upper, int lower, String num) {
+    public void detector(int distance, int upper, int lower, String num){
 
 
         NotificationManager NM = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
@@ -480,22 +469,18 @@ public class MainActivity extends Activity implements iBeaconScanManager.OniBeac
 
         notification(num, callback());
 
-        if (flag[Integer.parseInt(num)] == false) {
-
-            if (distance > -upper) {
+        if (flag[Integer.parseInt(num)] == false){
+            if (distance > -upper){
                 myVibrator();
                 flag[Integer.parseInt(num)] = true;
                 NM.notify(Integer.parseInt(num), notification(num, callback()));
 
             }
-
-        } else if (distance <= -lower) {
-
+        }else if(distance <= -lower){
             flag[Integer.parseInt(num)] = false;
             NM.cancel(Integer.parseInt(num));
 
         }
-
     }
 
     //TODO 方法：回app
@@ -507,7 +492,6 @@ public class MainActivity extends Activity implements iBeaconScanManager.OniBeac
                 intent, 0);
         return pendingIntent;
     }
-
 
     //TODO 方法：狀態列
     public Notification notification(String num, PendingIntent callback) {
@@ -523,12 +507,10 @@ public class MainActivity extends Activity implements iBeaconScanManager.OniBeac
         return notification;
     }
 
-
     //TODO 方法：震動
     public void myVibrator() {
         Vibrator myVibrator = (Vibrator) getSystemService(Service.VIBRATOR_SERVICE);
         myVibrator.vibrate(1000);
     }
-
 
 }

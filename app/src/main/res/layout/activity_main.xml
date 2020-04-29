@@ -46,7 +46,7 @@
 			android:id="@+id/frame_layout_1"
 			android:layout_width="match_parent"
 			android:layout_height="300dp"
-			android:layout_marginTop="300dp"
+			android:layout_marginTop="200dp"
 			android:background="@drawable/floor_3rd_2">
 
 			<ImageView
@@ -76,21 +76,23 @@
 			<Button
 				android:id="@+id/button3"
 				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				android:layout_marginLeft="160px"
-				android:layout_marginTop="1000px"
+				android:layout_height="30dp"
+				android:layout_marginLeft="175px"
+				android:layout_marginTop="1030px"
 				android:onClick="buttonOnClick_1"
 				android:text="商家總覽"
+				android:background="@drawable/button_rectangle_style"
 				android:visibility="invisible" />
 
 			<Button
 				android:id="@+id/button4"
 				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
+				android:layout_height="30dp"
 				android:layout_marginLeft="350px"
-				android:layout_marginTop="1000px"
+				android:layout_marginTop="1030px"
 				android:onClick="buttonOnClick_2"
 				android:text="地點標記"
+				android:background="@drawable/button_rectangle_style"
 				android:visibility="invisible" />
 		</FrameLayout>
 

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 按壓時 -->
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+
+            <!--邊框-->
+            <stroke android:width="2dip" android:color="@android:color/darker_gray" />
+            <solid android:color="@android:color/white" />
+        </shape>
+    </item>
+
+    <!-- 預設時 -->
+    <item android:color="@android:color/black">
+        <shape android:shape="rectangle"  >
+
+            <stroke android:width="2dip" android:color="@android:color/darker_gray" />
+            <solid android:color="@android:color/white" />
+        </shape>
+    </item>
+</selector>

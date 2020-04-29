@@ -1,127 +1,133 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:2:1-40:12
-INJECTED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:2:1-40:12
-INJECTED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:2:1-40:12
-INJECTED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:2:1-40:12
-INJECTED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:2:1-40:12
-INJECTED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:2:1-40:12
-INJECTED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:2:1-40:12
+ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:2:1-47:12
+INJECTED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:2:1-47:12
+INJECTED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:2:1-47:12
+INJECTED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:2:1-47:12
+INJECTED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:2:1-47:12
+INJECTED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:2:1-47:12
+INJECTED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:2:1-47:12
 	package
-		ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:4:5-32
+		ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:3:5-32
 		INJECTED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml
 		INJECTED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml
-		ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:2:1-40:12
+		ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:2:1-47:12
 		INJECTED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml
-		ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:2:1-40:12
+		ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:2:1-47:12
 		INJECTED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:3:5-63
+		ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:2:11-69
 uses-sdk
-ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:6:5-43
-INJECTED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:6:5-43
-INJECTED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:6:5-43
-INJECTED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:6:5-43
-INJECTED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:6:5-43
+ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:5:5-44
+INJECTED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:5:5-44
+INJECTED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:5:5-44
+INJECTED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:5:5-44
+INJECTED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:5:5-44
 	android:targetSdkVersion
 		INJECTED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml
-		ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:6:5-43
+		ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:5:5-44
 		INJECTED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:6:15-41
+		ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:5:15-41
 		INJECTED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml
 		INJECTED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml
 uses-permission#android.permission.BLUETOOTH_ADMIN
-ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:8:5-73
+ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:7:5-74
 	android:name
-		ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:8:22-71
+		ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:7:22-71
 uses-permission#android.permission.BLUETOOTH
-ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:9:5-67
+ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:8:5-68
 	android:name
-		ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:9:22-65
+		ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:8:22-65
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:10:5-78
+ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:9:5-79
 	android:name
-		ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:10:22-76
+		ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:9:22-76
 uses-permission#android.permission.ACCESS_WIFI_STATE
-ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:11:5-75
+ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:10:5-76
+	android:name
+		ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:10:22-73
+uses-permission#android.permission.CHANGE_WIFI_STATE
+ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:11:5-76
 	android:name
 		ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:11:22-73
-uses-permission#android.permission.CHANGE_WIFI_STATE
-ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:12:5-75
-	android:name
-		ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:12:22-73
 uses-permission#android.permission.INTERNET
-ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:13:5-66
+ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:12:5-67
 	android:name
-		ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:13:22-64
+		ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:12:22-64
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
-ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:14:5-79
+ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:13:5-80
 	android:name
-		ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:14:22-77
+		ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:13:22-77
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:15:5-80
+ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:14:5-81
 	android:name
-		ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:15:22-78
+		ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:14:22-78
 uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:16:5-78
+ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:15:5-79
 	android:name
-		ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:16:22-76
+		ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:15:22-76
 uses-permission#android.permission.ACCESS_COARSE_LOCATION
-ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:17:5-80
+ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:16:5-81
 	android:name
-		ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:17:22-78
+		ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:16:22-78
 uses-permission#android.permission.CAMERA
-ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:18:5-64
+ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:17:5-65
 	android:name
-		ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:18:22-62
+		ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:17:22-62
 uses-permission#android.permission.VIBRATE
-ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:19:5-66
+ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:18:5-66
 	android:name
-		ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:19:22-63
+		ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:18:22-63
 uses-permission#android.permission.
-ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:20:5-59
+ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:19:5-59
 	android:name
-		ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:20:22-56
+		ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:19:22-56
 uses-feature#android.hardware.bluetooth_le
-ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:22:5-89
+ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:21:5-23:35
 	android:required
-		ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:22:64-87
+		ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:23:9-32
 	android:name
-		ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:22:19-63
+		ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:22:9-53
 uses-feature#android.hardware.camera
-ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:23:5-83
+ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:24:5-26:35
 	android:required
-		ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:23:58-81
+		ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:26:9-32
 	android:name
-		ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:23:19-57
+		ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:25:9-47
 application
-ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:25:5-39:19
+ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:28:5-45:19
 	android:supportsRtl
-		ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:29:9-35
+		ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:32:9-35
 	android:label
-		ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:28:9-41
+		ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:31:9-41
 	android:icon
-		ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:27:9-43
+		ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:30:9-43
 	android:allowBackup
-		ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:26:9-35
+		ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:29:9-35
 	android:theme
-		ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:30:9-40
+		ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:33:9-40
+meta-data#com.google.android.actions
+ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:34:9-36:62
+	android:resource
+		ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:36:13-59
+	android:name
+		ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:35:13-54
 activity#com.mitlab.zusliu.User.Interface.MainActivity
-ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:32:9-38:20
+ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:38:9-44:20
 	android:name
-		ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:32:19-62
+		ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:38:19-62
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:33:13-37:29
+ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:39:13-43:29
 action#android.intent.action.MAIN
-ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:34:17-68
+ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:40:17-69
 	android:name
-		ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:34:25-66
+		ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:40:25-66
 category#android.intent.category.LAUNCHER
-ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:36:17-76
+ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:42:17-77
 	android:name
-		ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:36:27-74
+		ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:42:27-74

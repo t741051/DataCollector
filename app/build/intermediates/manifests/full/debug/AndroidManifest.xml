@@ -37,6 +37,10 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
+        <meta-data
+            android:name="com.google.android.actions"
+            android:resource="@xml/button_rectangle_style" />
+
         <activity android:name="com.mitlab.zusliu.User.Interface.MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -13,19 +13,20 @@ public final class R {
     public static final int activity_vertical_margin=0x7f010001;
   }
   public static final class drawable {
-    public static final int button_round_style=0x7f020000;
-    public static final int floor_3rd=0x7f020001;
-    public static final int floor_3rd_2=0x7f020002;
-    public static final int light_mark=0x7f020003;
-    public static final int map_01_lobby=0x7f020004;
-    public static final int map_02_office_all=0x7f020005;
-    public static final int map_03_room1=0x7f020006;
-    public static final int map_04_room2=0x7f020007;
-    public static final int map_05_room3=0x7f020008;
-    public static final int map_mark=0x7f020009;
-    public static final int ntust=0x7f02000a;
-    public static final int red_map_mark=0x7f02000b;
-    public static final int red_marker=0x7f02000c;
+    public static final int button_rectangle_style=0x7f020000;
+    public static final int button_round_style=0x7f020001;
+    public static final int floor_3rd=0x7f020002;
+    public static final int floor_3rd_2=0x7f020003;
+    public static final int light_mark=0x7f020004;
+    public static final int map_01_lobby=0x7f020005;
+    public static final int map_02_office_all=0x7f020006;
+    public static final int map_03_room1=0x7f020007;
+    public static final int map_04_room2=0x7f020008;
+    public static final int map_05_room3=0x7f020009;
+    public static final int map_mark=0x7f02000a;
+    public static final int ntust=0x7f02000b;
+    public static final int red_map_mark=0x7f02000c;
+    public static final int red_marker=0x7f02000d;
   }
   public static final class id {
     public static final int button2=0x7f030000;
@@ -58,5 +59,8 @@ public final class R {
   public static final class style {
     public static final int AppBaseTheme=0x7f070000;
     public static final int AppTheme=0x7f070001;
+  }
+  public static final class xml {
+    public static final int button_rectangle_style=0x7f080000;
   }
 }
