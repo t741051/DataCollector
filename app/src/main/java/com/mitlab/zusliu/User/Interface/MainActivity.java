@@ -46,6 +46,8 @@ import system.config.Setup;
 
 //////////////////////////////////
 import android.view.ViewGroup.LayoutParams;
+import android.widget.TextView;
+import android.widget.Toast;
 
 ///////////////////////////////////
 
@@ -70,24 +72,28 @@ public class MainActivity extends Activity implements iBeaconScanManager.OniBeac
     // 參數：裝置清單(資料清單)
     public ArrayList<ScannedBeacon> beacons = new ArrayList<ScannedBeacon>();
 
-
-
     //public Button button;
     FrameLayout frame_1;    //地圖frame
     FrameLayout frame_2;    //按鍵frame
-    public ImageView [] map_mark_image = new ImageView[15];
-    public Button btn_1,btn_2;
-    public ImageButton [] img_btn_mark = new ImageButton[15];
-    static boolean flag_btn = false;    //"+"按鍵狀態
-    static boolean [] flag_mark_btn = {false,false,false,false,false,false,false,false,false,false,false,false};
-    static int [] beacon_state_mem = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+
+    public Button btn_1,btn_2;  //商家總覽 地點標記 按鍵
+    public ImageButton [] img_btn_mark = new ImageButton[15];   //地標按鍵
+    public TextView mark_state;
+    static boolean flag_btn = false;    // "+" 按鍵狀態
+    static boolean btn_1_flag = false;
+    static boolean btn_2_flag = false;
+    static boolean [] flag_mark_btn = {false,false,false,false,false,false,false,false,false,false,false};  //地標被點選狀態
+
     // 儲存地標位置
+    /////////////////////////////////0   1   2   3   4   5   6   7   8   9   10
     static int [] mark_position_X = {600,560,600,600,530,260,480,380,380,280,480};
     static int [] mark_position_Y = {30 ,110,180,285,420,400,480,420,320,320,300};
     static int [] beacon_num      = {  5, 81, 30, 41, 42, 43,  6, 82, 91, 92, 93};
     static int choose_one = 0;    //只讓一個點顯示
     static int pre_beacon = 0;
     static int beacon_in  = 0;
+
+    static String mark_state_text = "";
     // TODO 方法：主程式
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -121,7 +127,12 @@ public class MainActivity extends Activity implements iBeaconScanManager.OniBeac
         frame_2 = (FrameLayout)findViewById(R.id.frame_layout_2);
         btn_1 = (Button)findViewById(R.id.button3);
         btn_2 = (Button)findViewById(R.id.button4);
-        //display_mark(11);
+
+        mark_state = new TextView(this);
+
+        frame_2.addView(mark_state);
+        mark_state.setTextColor(getResources().getColor(android.R.color.holo_blue_light));
+
         display_mark_btn(11);
 ///////////////////////////////////////////////////////////////////////////////////
     }
@@ -132,7 +143,6 @@ public class MainActivity extends Activity implements iBeaconScanManager.OniBeac
         int num;
         for(num = 0;num <= 10;num++){
             if(beacon_in == beacon_num[num]) break;
-
         }
         return num;
     }
@@ -152,16 +162,30 @@ public class MainActivity extends Activity implements iBeaconScanManager.OniBeac
     //TODO 商家資訊按鍵
     public void buttonOnClick_1(View v) {
         // 寫要做的事...
-        if(flag_mark_btn[0] == false)
-            connect_to_web(0);
-        else
-            connect_to_web(1);
+/*
+        btn_1_flag = !btn_1_flag;
+        if(btn_1_flag) btn_1.setBackgroundColor(getResources().getColor(android.R.color.holo_orange_light));
+        else  btn_1.setBackgroundColor(getResources().getColor(android.R.color.white));
+
+ */
+        //display_mark_state();
+        connect_to_web(0);
     }
     //TODO 地點標記按鍵
     public void buttonOnClick_2(View v) {
         // 寫要做的事...
+        for(int i = 0;i < 11;i++){
+            if(flag_mark_btn[i] == true){
+                change_mark(i,4);
+            }else{
+                change_mark(i,0);
+            }
+        }
+        btn_2_flag = !btn_2_flag;
+        if(btn_2_flag) btn_2.setBackgroundColor(getResources().getColor(android.R.color.holo_orange_light));
+        else  btn_2.setBackgroundColor(getResources().getColor(android.R.color.white));
 
-        connect_to_web(1);
+        //connect_to_web(0);
     }
     //TODO 連結到網站
     public void connect_to_web(int a){
@@ -177,22 +201,18 @@ public class MainActivity extends Activity implements iBeaconScanManager.OniBeac
         Intent intent = new Intent(Intent.ACTION_VIEW, uri);
         startActivity(intent);
     }
-    /*
-    public void display_mark(int x){
-        // TODO 方法：產生X個圖標
-        for(int i = 0;i < x;i++){
-            map_mark_image[i] = new ImageView(this);
-            map_mark_image[i].setImageResource(R.drawable.map_mark);
-            map_mark_image[i].setX(mark_position_X[i]);
-            map_mark_image[i].setY(mark_position_Y[i]);
-            frame_1.addView(map_mark_image[i]);
-            map_mark_image[i].getLayoutParams().height = 65;
-            map_mark_image[i].getLayoutParams().width = 65;
+
+    // TODO 方法：查看圖標狀態
+    public void display_mark_state(){
+
+        mark_state_text = "";
+        for(int i = 0;i < 11;i++){
+            mark_state_text += flag_mark_btn[i] + " ";
         }
+        mark_state.setText(mark_state_text);
     }
-    */
+    // TODO 方法：產生X個圖標按鍵
     public void display_mark_btn(int x){
-        // TODO 方法：產生X個圖標按鍵
         for(int i = 0;i < x;i++){
             img_btn_mark[i] = new ImageButton(this);
             img_btn_mark[i].setImageResource(R.drawable.map_mark);
@@ -214,44 +234,20 @@ public class MainActivity extends Activity implements iBeaconScanManager.OniBeac
             public void onClick(View view) {
                 flag_mark_btn[a] = !flag_mark_btn[a];
                 if(flag_mark_btn[a] == true){
+                    for(int i = 0;i < 11;i++){
+                        change_mark(i,0);
+                        flag_mark_btn[i] = false;
+                    }
+                    flag_mark_btn[a] = true;
                     change_mark(a,3);
+                    Toast.makeText(getApplicationContext(),"number " + a, Toast.LENGTH_SHORT).show();
                 }else{
                     change_mark(a,0);
                 }
             }
         });
     }
-/*
-    public void change_mark(int x,int state){
-        // TODO 方法：選擇第X個 改變圖標 0:黑色 1:紅色
-        switch(state){
-            case 0:
-                Log.v("s_h_b", String.valueOf(map_mark_image[x].getLayoutParams().height));
-                map_mark_image[x].getLayoutParams().height = 65;
-                map_mark_image[x].getLayoutParams().width = 65;
-                map_mark_image[x].setImageResource(R.drawable.map_mark);
-                Log.v("e_h_b", String.valueOf(map_mark_image[x].getLayoutParams().height));
-                break;
-            case 1:
-                Log.v("s_h_r", String.valueOf(map_mark_image[x].getLayoutParams().height));
-                map_mark_image[x].getLayoutParams().height = 65;
-                map_mark_image[x].getLayoutParams().width = 65;
-                map_mark_image[x].setImageResource(R.drawable.red_map_mark);
-                Log.v("e_h_r", String.valueOf(map_mark_image[x].getLayoutParams().height));
-                break;
-            case 2:
-                map_mark_image[x].getLayoutParams().height = 65;
-                map_mark_image[x].getLayoutParams().width = 65;
-                map_mark_image[x].setImageResource(R.drawable.light_mark);
-                break;
-            default:
-                map_mark_image[x].getLayoutParams().height = 65;
-                map_mark_image[x].getLayoutParams().width = 65;
-                map_mark_image[x].setImageResource(R.drawable.map_mark);
-                break;
-        }
-    }
-    */
+
     public void change_mark(int x,int state){
         // TODO 方法：選擇第X個 改變圖標 0:黑色 1:紅色
         switch(state){
@@ -278,6 +274,11 @@ public class MainActivity extends Activity implements iBeaconScanManager.OniBeac
                 img_btn_mark[x].getLayoutParams().height = 65;
                 img_btn_mark[x].getLayoutParams().width = 65;
                 img_btn_mark[x].setImageResource(R.drawable.red_marker);
+                break;
+            case 4:
+                img_btn_mark[x].getLayoutParams().height = 65;
+                img_btn_mark[x].getLayoutParams().width = 65;
+                img_btn_mark[x].setImageResource(R.drawable.pin);
                 break;
             default:
                 img_btn_mark[x].getLayoutParams().height = 65;

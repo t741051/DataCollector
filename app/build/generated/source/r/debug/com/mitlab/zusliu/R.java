@@ -25,8 +25,9 @@ public final class R {
     public static final int map_05_room3=0x7f020009;
     public static final int map_mark=0x7f02000a;
     public static final int ntust=0x7f02000b;
-    public static final int red_map_mark=0x7f02000c;
-    public static final int red_marker=0x7f02000d;
+    public static final int pin=0x7f02000c;
+    public static final int red_map_mark=0x7f02000d;
+    public static final int red_marker=0x7f02000e;
   }
   public static final class id {
     public static final int button2=0x7f030000;

@@ -92,6 +92,10 @@
         "source": "D:\\abc\\DataCollector\\app\\src\\main\\res\\drawable-xxhdpi\\map_05_room3.png"
     },
     {
+        "merged": "D:\\abc\\DataCollector\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_pin.png.flat",
+        "source": "D:\\abc\\DataCollector\\app\\src\\main\\res\\drawable-xxhdpi\\pin.png"
+    },
+    {
         "merged": "D:\\abc\\DataCollector\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
         "source": "D:\\abc\\DataCollector\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
     },

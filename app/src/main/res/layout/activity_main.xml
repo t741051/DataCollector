@@ -46,7 +46,7 @@
 			android:id="@+id/frame_layout_1"
 			android:layout_width="match_parent"
 			android:layout_height="300dp"
-			android:layout_marginTop="200dp"
+			android:layout_marginTop="180dp"
 			android:background="@drawable/floor_3rd_2">
 
 			<ImageView
