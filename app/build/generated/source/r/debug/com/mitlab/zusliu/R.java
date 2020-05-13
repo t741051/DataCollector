@@ -13,37 +13,39 @@ public final class R {
     public static final int activity_vertical_margin=0x7f010001;
   }
   public static final class drawable {
-    public static final int button_rectangle_style=0x7f020000;
-    public static final int button_round_style=0x7f020001;
-    public static final int floor_3rd=0x7f020002;
-    public static final int floor_3rd_2=0x7f020003;
-    public static final int light_mark=0x7f020004;
-    public static final int map_01_lobby=0x7f020005;
-    public static final int map_02_office_all=0x7f020006;
-    public static final int map_03_room1=0x7f020007;
-    public static final int map_04_room2=0x7f020008;
-    public static final int map_05_room3=0x7f020009;
-    public static final int map_mark=0x7f02000a;
-    public static final int ntust=0x7f02000b;
-    public static final int pin=0x7f02000c;
-    public static final int red_map_mark=0x7f02000d;
-    public static final int red_marker=0x7f02000e;
+    public static final int blue_mark=0x7f020000;
+    public static final int button_rectangle_style=0x7f020001;
+    public static final int button_round_style=0x7f020002;
+    public static final int floor_3rd=0x7f020003;
+    public static final int floor_3rd_2=0x7f020004;
+    public static final int light_mark=0x7f020005;
+    public static final int map_01_lobby=0x7f020006;
+    public static final int map_02_office_all=0x7f020007;
+    public static final int map_03_room1=0x7f020008;
+    public static final int map_04_room2=0x7f020009;
+    public static final int map_05_room3=0x7f02000a;
+    public static final int map_mark=0x7f02000b;
+    public static final int ntust=0x7f02000c;
+    public static final int pin=0x7f02000d;
+    public static final int red_map_mark=0x7f02000e;
+    public static final int red_marker=0x7f02000f;
   }
   public static final class id {
     public static final int button2=0x7f030000;
     public static final int button3=0x7f030001;
     public static final int button4=0x7f030002;
-    public static final int frame_layout_1=0x7f030003;
-    public static final int frame_layout_2=0x7f030004;
-    public static final int img_map_mark=0x7f030005;
-    public static final int it3_text1=0x7f030006;
-    public static final int it3_text2=0x7f030007;
-    public static final int it3_text3=0x7f030008;
-    public static final int it3_text4=0x7f030009;
-    public static final int it3_text5=0x7f03000a;
-    public static final int it3_text6=0x7f03000b;
-    public static final int map=0x7f03000c;
-    public static final int myListView=0x7f03000d;
+    public static final int button5=0x7f030003;
+    public static final int frame_layout_1=0x7f030004;
+    public static final int frame_layout_2=0x7f030005;
+    public static final int img_map_mark=0x7f030006;
+    public static final int it3_text1=0x7f030007;
+    public static final int it3_text2=0x7f030008;
+    public static final int it3_text3=0x7f030009;
+    public static final int it3_text4=0x7f03000a;
+    public static final int it3_text5=0x7f03000b;
+    public static final int it3_text6=0x7f03000c;
+    public static final int map=0x7f03000d;
+    public static final int myListView=0x7f03000e;
   }
   public static final class layout {
     public static final int activity_main=0x7f040000;

@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Timer;
+import java.util.TimerTask;
 
 
 import android.app.Activity;
@@ -76,25 +78,30 @@ public class MainActivity extends Activity implements iBeaconScanManager.OniBeac
     FrameLayout frame_1;    //地圖frame
     FrameLayout frame_2;    //按鍵frame
 
-    public Button btn_1,btn_2;  //商家總覽 地點標記 按鍵
+    public Button btn_1,btn_2,btn_3;  //商家總覽 地點標記 按鍵
     public ImageButton [] img_btn_mark = new ImageButton[15];   //地標按鍵
     public TextView mark_state;
     static boolean flag_btn = false;    // "+" 按鍵狀態
-    static boolean btn_1_flag = false;
-    static boolean btn_2_flag = false;
+    static boolean btn_1_flag = false;  //"+"按鍵狀態
+    static boolean btn_2_flag = false;  //地點標記按鍵狀態
+    static boolean btn_3_flag = false;  //網站導覽按鍵狀態
     static boolean [] flag_mark_btn = {false,false,false,false,false,false,false,false,false,false,false};  //地標被點選狀態
+    static boolean [] flag_mark_btn2 = {false,false,false,false,false,false,false,false,false,false,false};  //地點標記狀態
+    static boolean [] flag_mark_btn3 = {false,false,false,false,false,false,false,false,false,false,false};  //網站導覽狀態
 
     // 儲存地標位置
     /////////////////////////////////0   1   2   3   4   5   6   7   8   9   10
-    static int [] mark_position_X = {600,560,600,600,530,260,480,380,380,280,480};
-    static int [] mark_position_Y = {30 ,110,180,285,420,400,480,420,320,320,300};
+    static int [] mark_position_X = {560,560,560,560,470, 80,240,380,380, 90,240};
+    static int [] mark_position_Y = {30 ,115,200,285,375,430,430,430,320,320,320};
     static int [] beacon_num      = {  5, 81, 30, 41, 42, 43,  6, 82, 91, 92, 93};
     static int [] img_btn_state   = {  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0};
     static int choose_one = 0;    //只讓一個點顯示
     static int pre_beacon = 0;
     static int beacon_in  = 0;
-    static int user_place = 0;
+    static int user_place = 12;
     static int beacon_amount = 11;
+    Timer timer = new Timer();;    //宣告一個時間函示
+
     static String mark_state_text = "";
     // TODO 方法：主程式
     @Override
@@ -129,15 +136,17 @@ public class MainActivity extends Activity implements iBeaconScanManager.OniBeac
         frame_2 = (FrameLayout)findViewById(R.id.frame_layout_2);
         btn_1 = (Button)findViewById(R.id.button3);
         btn_2 = (Button)findViewById(R.id.button4);
+        btn_3 = (Button)findViewById(R.id.button5);
 
         mark_state = new TextView(this);
+
         frame_2.addView(mark_state);
         mark_state.setTextColor(getResources().getColor(android.R.color.holo_blue_light));
 
         display_mark_btn(beacon_amount);
 ///////////////////////////////////////////////////////////////////////////////////
     }
-///////////////////////////////////////////////////////////////////////////////////測試
+    ///////////////////////////////////////////////////////////////////////////////////測試
     //TODO Beacon編號對應
     public int correspod_beacon(int major,int minor){
         beacon_in = (major * 10) + minor;
@@ -151,57 +160,138 @@ public class MainActivity extends Activity implements iBeaconScanManager.OniBeac
     //TODO "+"按鍵
     public void buttonOnClick(View v) {
         // 寫要做的事...
-        flag_btn = !flag_btn;
-        if(flag_btn == true){
-            btn_1.setVisibility(View.VISIBLE);
-            btn_2.setVisibility(View.VISIBLE);
-        }else{
-            btn_1.setVisibility(View.INVISIBLE);
-            btn_2.setVisibility(View.INVISIBLE);
-            btn_2.setVisibility(View.INVISIBLE);
-            btn_2.setBackgroundColor(getResources().getColor(android.R.color.white));
+        if(btn_2_flag==false && btn_3_flag==false){
+            btn_1_flag = !btn_1_flag;
+            if(btn_1_flag == true){
+                btn_1.setVisibility(View.VISIBLE);
+                btn_2.setVisibility(View.VISIBLE);
+                btn_3.setVisibility(View.VISIBLE);
+            }else{
+                btn_1.setVisibility(View.INVISIBLE);
+                btn_2.setVisibility(View.INVISIBLE);
+                btn_3.setVisibility(View.INVISIBLE);
+                btn_2_flag = false;
+                btn_2.setBackgroundColor(getResources().getColor(android.R.color.white));
+                btn_3_flag = false;
+                btn_3.setBackgroundColor(getResources().getColor(android.R.color.white));
+            }
         }
+
     }
     //TODO 商家資訊按鍵
     public void buttonOnClick_1(View v) {
         // 寫要做的事...
-
-        btn_1_flag = !btn_1_flag;
+        if(btn_2_flag == false && btn_3_flag == false) {
+            connect_to_web(0);
+        }
 /*
+        btn_1_flag = !btn_1_flag;
         if(btn_1_flag) btn_1.setBackgroundColor(getResources().getColor(android.R.color.holo_orange_light));
         else  btn_1.setBackgroundColor(getResources().getColor(android.R.color.white));
 
-*/
-
-        connect_to_web(0);
+ */
+        //display_mark_state();
+        //connect_to_web(0);
     }
     //TODO 地點標記按鍵
     public void buttonOnClick_2(View v) {
         // 寫要做的事...
-
-        for(int i = 0;i < beacon_amount;i++){
-            if(i != user_place && flag_mark_btn[i] == true){
-                change_mark(i,4);
-            }
-        }
-        btn_2_flag = !btn_2_flag;
+        if(btn_1_flag == true && btn_3_flag == false) btn_2_flag = !btn_2_flag;
+        else {}
         if(btn_2_flag){
             btn_2.setBackgroundColor(getResources().getColor(android.R.color.holo_orange_light));
-
+            /*for(int i = 0;i < 11;i++) {
+                if (flag_mark_btn[i] == true && flag_mark_btn2[i] == true) {
+                    change_mark(i,2);
+                }
+                else if(flag_mark_btn[i] == true && flag_mark_btn2[i] == false){
+                    change_mark(i,1);
+                }
+                else if(flag_mark_btn[i] == false && flag_mark_btn2[i] == true){
+                    change_mark(i,3);
+                }
+                else {
+                    change_mark(i, 0);
+                }
+            }*/
         }
         else  btn_2.setBackgroundColor(getResources().getColor(android.R.color.white));
 
         //connect_to_web(0);
     }
+    //TODO 網站導覽暗箭
+    public void buttonOnClick_3(View v) {
+        // 寫要做的事...
+        if(btn_1_flag == true && btn_2_flag == false)btn_3_flag = !btn_3_flag;
+        else {}
+        if(btn_3_flag){
+            for(int i = 0;i < beacon_amount;i++) flag_mark_btn3[i] = false;
+            btn_3.setBackgroundColor(getResources().getColor(android.R.color.holo_orange_light));
+        }
+        else  {
+            btn_3.setBackgroundColor(getResources().getColor(android.R.color.white));
+            for(int i = 0;i < 11;i++) {
+                if (flag_mark_btn[i] == true && flag_mark_btn2[i] == true) {
+                    change_mark(i,2);
+                }
+                else if(flag_mark_btn[i] == true && flag_mark_btn2[i] == false){
+                    change_mark(i,1);
+                }
+                else if(flag_mark_btn[i] == false && flag_mark_btn2[i] == true){
+                    change_mark(i,3);
+                }
+                else {
+                    change_mark(i, 0);
+                }
+            }
+            for(int j = 0;j < beacon_amount;j++){
+                if(flag_mark_btn3[j]==true) connect_to_web(j+1);
+            }
+            /*if(btn_2_flag==false) {
+                connect_to_web(0);
+            }*/
+        }
+    }
+
     //TODO 連結到網站
     public void connect_to_web(int a){
         Uri uri = Uri.parse("https://www.google.com");
         switch (a){
             case 0:
-                uri = Uri.parse("http://140.118.122.242/test/test.php");
+                uri = Uri.parse("http://140.118.122.242/test/beacon_test.php");
                 break;
             case 1:
                 uri = Uri.parse("https://www.yahoo.com.tw");
+                break;
+            case 2:
+                uri = Uri.parse("https://www.nike.com/tw/");
+                break;
+            case 3:
+                uri = Uri.parse("https://moodle.ntust.edu.tw/");
+                break;
+            case 4:
+                uri = Uri.parse("https://translate.google.com.tw/");
+                break;
+            case 5:
+                uri = Uri.parse("https://www.youtube.com/");
+                break;
+            case 6:
+                uri = Uri.parse("https://www.pornhub.com/");
+                break;
+            case 7:
+                uri = Uri.parse("https://www.facebook.com/");
+                break;
+            case 8:
+                uri = Uri.parse("https://www.ntust.edu.tw/home.php");
+                break;
+            case 9:
+                uri = Uri.parse("https://www.ntust.edu.tw/home.php");
+                break;
+            case 10:
+                uri = Uri.parse("https://www.ntust.edu.tw/home.php");
+                break;
+            case 11:
+                uri = Uri.parse("https://www.ntust.edu.tw/home.php");
                 break;
         }
         Intent intent = new Intent(Intent.ACTION_VIEW, uri);
@@ -213,7 +303,7 @@ public class MainActivity extends Activity implements iBeaconScanManager.OniBeac
 
         mark_state_text = "";
         for(int i = 0;i < beacon_amount;i++){
-            mark_state_text += i + ": " + img_btn_state[i] + "\n";
+            mark_state_text += flag_mark_btn[i] + " ";
         }
         mark_state.setText(mark_state_text);
     }
@@ -238,27 +328,81 @@ public class MainActivity extends Activity implements iBeaconScanManager.OniBeac
         img_btn_mark[a].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                flag_mark_btn[a] = !flag_mark_btn[a];
-                if(flag_mark_btn[a] == true){
-                    for(int i = 0;i < beacon_amount;i++){
-                        change_mark(i,0);
-                        flag_mark_btn[i] = false;
+                if(btn_2_flag){
+                    flag_mark_btn2[a] = !flag_mark_btn2[a];
+                    if(flag_mark_btn2[a] == true){
+                        for(int i = 0;i < beacon_amount;i++) {
+                            flag_mark_btn2[i] = false;
+                            if(flag_mark_btn[i] == true){
+                                change_mark(i,1);
+                            }
+                            else {
+                                change_mark(i, 0);
+                            }
+                        }
+                        flag_mark_btn2[a] = true;
+                        change_mark(a,3);
+                        Toast.makeText(getApplicationContext(),"number " + a, Toast.LENGTH_SHORT).show();
                     }
-                    flag_mark_btn[a] = true;
-                    change_mark(a,3);
+                    else{
+                        change_mark(a,0);
+                        for(int i = 0;i < beacon_amount;i++) {
+                            flag_mark_btn2[i] = false;
+                            if (flag_mark_btn[i] == true) {
+                                change_mark(i,1);
+                            }
+                            else {
+                                change_mark(i, 0);
+
+                            }
+                        }
+                    }
+                }
+                else if(btn_3_flag){
+                    flag_mark_btn3[a] = !flag_mark_btn3[a];
+                    if(flag_mark_btn3[a] == true){
+                        for(int i = 0;i < beacon_amount;i++) {
+                            flag_mark_btn3[i]=false;
+                            if (flag_mark_btn[i] == true && flag_mark_btn2[i] == true) {
+                                change_mark(i,2);
+                            }
+                            else if(flag_mark_btn[i] == true && flag_mark_btn2[i] == false){
+                                change_mark(i,1);
+                            }
+                            else if(flag_mark_btn[i] == false && flag_mark_btn2[i] == true){
+                                change_mark(i,3);
+                            }
+                            else {
+                                change_mark(i, 0);
+                            }
+                        }
+                        flag_mark_btn3[a] = true;
+                        change_mark(a,4);
+                        Toast.makeText(getApplicationContext(),"number " + a, Toast.LENGTH_SHORT).show();
+                    }
+                    else{
+                        //change_mark(a,0);
+                        for(int i = 0;i < beacon_amount;i++) {
+                            flag_mark_btn3[i]=false;
+                            if (flag_mark_btn[i] == true && flag_mark_btn2[i] == true) {
+                                change_mark(i,2);
+                            }
+                            else if(flag_mark_btn[i] == true && flag_mark_btn2[i] == false){
+                                change_mark(i,1);
+                            }
+                            else if(flag_mark_btn[i] == false && flag_mark_btn2[i] == true){
+                                change_mark(i,3);
+                            }
+                            else {
+                                change_mark(i, 0);
+                            }
+                        }
+                    }
+                }
+                else if(btn_2_flag!=true && btn_3_flag!=true){
                     Toast.makeText(getApplicationContext(),"number " + a, Toast.LENGTH_SHORT).show();
-                }else{
-                    change_mark(a,0);
+                    //connect_to_web(1);
                 }
-
-                /*
-                if(btn_2_flag == true){
-
-                }
-
-
-                 */
             }
         });
     }
@@ -277,7 +421,7 @@ public class MainActivity extends Activity implements iBeaconScanManager.OniBeac
                 Log.v("s_h_r", String.valueOf(img_btn_mark[x].getLayoutParams().height));
                 img_btn_mark[x].getLayoutParams().height = 65;
                 img_btn_mark[x].getLayoutParams().width = 65;
-                img_btn_mark[x].setImageResource(R.drawable.red_map_mark);
+                img_btn_mark[x].setImageResource(R.drawable.blue_mark);
                 Log.v("e_h_r", String.valueOf(img_btn_mark[x].getLayoutParams().height));
                 break;
             case 2:
@@ -302,37 +446,125 @@ public class MainActivity extends Activity implements iBeaconScanManager.OniBeac
                 break;
         }
         img_btn_state[x] = state;
-        display_mark_state();
     }
     //TODO 判斷beacon距離改變狀態
     public void beacon_state(int major,int minor,int rssi){
         if(-rssi < 60){
-            if(choose_one ==1){
-                /*if(pre_beacon != beacon_in) {
+            //change_mark(correspod_beacon(major, minor), 1);
+            for(int i = 0;i < beacon_amount;i++) {
+                if(flag_mark_btn[i]==true){
+                    choose_one=1;
+                    //change_mark(i, 1);
+                }
+            }
+            if(choose_one == 0){
+                change_mark(correspod_beacon(major, minor), 1);
+                user_place = correspod_beacon(major, minor);
+                flag_mark_btn[user_place]=true;
+            }
+            choose_one=0;
+            /*if(choose_one ==1){
+                if(pre_beacon != beacon_in) {
                     change_mark(correspod_beacon(pre_beacon / 10, pre_beacon % 10), 0);
                 }
                 change_mark(correspod_beacon(major, minor), 1);
-                pre_beacon = beacon_in;*/
-            }else{
-                choose_one = 1;
-                change_mark(correspod_beacon(major, minor), 1);
                 pre_beacon = beacon_in;
             }
-        }else{
+            else{
+                choose_one = 1;
+                change_mark(correspod_beacon(major, minor), 1);
+                user_place = correspod_beacon(major, minor);
+                flag_mark_btn[user_place]=true;
+                pre_beacon = beacon_in;
+            }*/
+        }
+        else{
+            //////////////////////////////////////////////////////
+            //標記或導覽狀態距離變遠 把點化回來
             /*
-            if(choose_one == 1){
-                choose_one = 0;
-                change_mark(correspod_beacon(major,minor),0);
+            for(int a=0;a<beacon_amount;a++){
+                if(btn_2_flag){
+                    flag_mark_btn2[a] = !flag_mark_btn2[a];
+                    if(flag_mark_btn2[a] == true){
+                        for(int i = 0;i < beacon_amount;i++) {
+                            flag_mark_btn2[i] = false;
+                            if(flag_mark_btn[i] == true){
+                                change_mark(i,1);
+                            }
+                            else {
+                                change_mark(i, 0);
+                            }
+                        }
+                        flag_mark_btn2[a] = true;
+                        change_mark(a,3);
+                        Toast.makeText(getApplicationContext(),"number " + a, Toast.LENGTH_SHORT).show();
+                    }
+                    else{
+                        change_mark(a,0);
+                        for(int i = 0;i < beacon_amount;i++) {
+                            flag_mark_btn2[i] = false;
+                            if (flag_mark_btn[i] == true) {
+                                change_mark(i,1);
+                            }
+                            else {
+                                change_mark(i, 0);
+
+                            }
+                        }
+                    }
+                }
+                else if(btn_3_flag){
+                    flag_mark_btn3[a] = !flag_mark_btn3[a];
+                    if(flag_mark_btn3[a] == true){
+                        for(int i = 0;i < beacon_amount;i++) {
+                            flag_mark_btn3[i]=false;
+                            if (flag_mark_btn[i] == true && flag_mark_btn2[i] == true) {
+                                change_mark(i,2);
+                            }
+                            else if(flag_mark_btn[i] == true && flag_mark_btn2[i] == false){
+                                change_mark(i,1);
+                            }
+                            else if(flag_mark_btn[i] == false && flag_mark_btn2[i] == true){
+                                change_mark(i,3);
+                            }
+                            else {
+                                change_mark(i, 0);
+                            }
+                        }
+                        flag_mark_btn3[a] = true;
+                        change_mark(a,4);
+                        Toast.makeText(getApplicationContext(),"number " + a, Toast.LENGTH_SHORT).show();
+                    }
+                    else{
+                        //change_mark(a,0);
+                        for(int i = 0;i < beacon_amount;i++) {
+                            flag_mark_btn3[i]=false;
+                            if (flag_mark_btn[i] == true && flag_mark_btn2[i] == true) {
+                                change_mark(i,2);
+                            }
+                            else if(flag_mark_btn[i] == true && flag_mark_btn2[i] == false){
+                                change_mark(i,1);
+                            }
+                            else if(flag_mark_btn[i] == false && flag_mark_btn2[i] == true){
+                                change_mark(i,3);
+                            }
+                            else {
+                                change_mark(i, 0);
+                            }
+                        }
+                    }
+                }
             }
-            else{}
-             */
-            choose_one = 0;
+            */
+            //////////////////////////////////////////////////////
+            //choose_one = 0;
+            flag_mark_btn[correspod_beacon(major,minor)]=false;
             change_mark(correspod_beacon(major,minor),0);
         }
 
     }
 
-////////////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////////////
 // TODO 方法：活動處理器
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -383,10 +615,10 @@ public class MainActivity extends Activity implements iBeaconScanManager.OniBeac
 
             if((System.currentTimeMillis() - beacon.lastUpdate) > Setup.TIME_BEACON_TIMEOUT){
                 // Step.02(更新裝置背景執行流程) 移除清單
-            //////////////////////////////////////////////////////////////////////////////////////
+                //////////////////////////////////////////////////////////////////////////////////////
                 change_mark(correspod_beacon(beacon.major,beacon.minor),0);
                 choose_one = 0;
-            /////////////////////////////////////////////////////////////////////////////////////
+                /////////////////////////////////////////////////////////////////////////////////////
                 this.beacons.remove(i);
 
             }

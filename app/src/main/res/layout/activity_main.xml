@@ -88,12 +88,23 @@
 				android:id="@+id/button4"
 				android:layout_width="wrap_content"
 				android:layout_height="30dp"
-				android:layout_marginLeft="350px"
+				android:layout_marginLeft="330px"
 				android:layout_marginTop="1030px"
 				android:onClick="buttonOnClick_2"
 				android:text="地點標記"
 				android:background="@drawable/button_rectangle_style"
 				android:visibility="invisible" />
+
+			<Button
+				android:id="@+id/button5"
+				android:layout_width="wrap_content"
+				android:layout_height="30dp"
+				android:layout_marginLeft="480px"
+				android:layout_marginTop="1030px"
+				android:onClick="buttonOnClick_3"
+				android:background="@drawable/button_rectangle_style"
+				android:visibility="invisible"
+				android:text="網站導覽" />
 		</FrameLayout>
 
 		<![CDATA[
