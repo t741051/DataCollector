@@ -19,13 +19,13 @@
 				android:id="@+id/myListView"
 				android:layout_width="match_parent"
 				android:layout_height="607dp"
-				android:background="#000000"
+				android:background="@android:color/background_light"
 				android:divider="#55FFFFFF"
 				android:dividerHeight="2dp"
 				android:paddingLeft="10dp"
 				android:paddingRight="10dp"
 				android:scrollbars="vertical"
-				android:visibility="visible"/>
+				android:visibility="visible" />
 
 
 		</LinearLayout>

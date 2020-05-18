@@ -8,12 +8,12 @@
         "source": "D:\\abc\\DataCollector\\app\\src\\main\\res\\drawable-xxhdpi\\map_02_office_all.png"
     },
     {
-        "merged": "D:\\abc\\DataCollector\\app\\build\\intermediates\\res\\merged\\debug\\layout_beacon_data.xml.flat",
-        "source": "D:\\abc\\DataCollector\\app\\src\\main\\res\\layout\\beacon_data.xml"
-    },
-    {
         "merged": "D:\\abc\\DataCollector\\app\\build\\intermediates\\res\\merged\\debug\\drawable_button_round_style.xml.flat",
         "source": "D:\\abc\\DataCollector\\app\\src\\main\\res\\drawable\\button_round_style.xml"
+    },
+    {
+        "merged": "D:\\abc\\DataCollector\\app\\build\\intermediates\\res\\merged\\debug\\layout_beacon_data.xml.flat",
+        "source": "D:\\abc\\DataCollector\\app\\src\\main\\res\\layout\\beacon_data.xml"
     },
     {
         "merged": "D:\\abc\\DataCollector\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
