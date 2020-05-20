@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-	xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
 	xmlns:app="http://schemas.android.com/apk/res-auto"
 	android:layout_width="match_parent"
-	android:layout_height="match_parent"
-	android:orientation="vertical">
+	android:layout_height="match_parent">
 
 
 	<FrameLayout
@@ -19,7 +17,7 @@
 				android:id="@+id/myListView"
 				android:layout_width="match_parent"
 				android:layout_height="607dp"
-				android:background="@android:color/background_light"
+				android:background="@android:color/background_dark"
 				android:divider="#55FFFFFF"
 				android:dividerHeight="2dp"
 				android:paddingLeft="10dp"
@@ -37,9 +35,6 @@
 			android:layout_marginTop="300px"
 			android:src="@drawable/floor_3rd_2"
 			android:visibility="invisible" />
-
-
-
 
 
 		<FrameLayout
@@ -65,13 +60,13 @@
 				android:id="@+id/button2"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
-				android:layout_marginTop="980px"
 				android:layout_marginLeft="30px"
+				android:layout_marginTop="980px"
+				android:background="@drawable/button_round_style"
 				android:onClick="buttonOnClick"
 				android:text="+"
-				android:textSize="40dp"
-				android:background="@drawable/button_round_style"
-				android:textColor="@android:color/white" />
+				android:textColor="@android:color/white"
+				android:textSize="40dp" />
 
 			<Button
 				android:id="@+id/button3"
@@ -79,9 +74,9 @@
 				android:layout_height="30dp"
 				android:layout_marginLeft="175px"
 				android:layout_marginTop="1030px"
+				android:background="@drawable/button_rectangle_style"
 				android:onClick="buttonOnClick_1"
 				android:text="商家總覽"
-				android:background="@drawable/button_rectangle_style"
 				android:visibility="invisible" />
 
 			<Button
@@ -90,9 +85,9 @@
 				android:layout_height="30dp"
 				android:layout_marginLeft="330px"
 				android:layout_marginTop="1030px"
+				android:background="@drawable/button_rectangle_style"
 				android:onClick="buttonOnClick_2"
 				android:text="地點標記"
-				android:background="@drawable/button_rectangle_style"
 				android:visibility="invisible" />
 
 			<Button
@@ -101,13 +96,13 @@
 				android:layout_height="30dp"
 				android:layout_marginLeft="480px"
 				android:layout_marginTop="1030px"
-				android:onClick="buttonOnClick_3"
 				android:background="@drawable/button_rectangle_style"
-				android:visibility="invisible"
-				android:text="網站導覽" />
-		</FrameLayout>
+				android:onClick="buttonOnClick_3"
+				android:text="網站導覽"
+				android:visibility="invisible" />
+		</FrameLayout><![CDATA[
 
-		<![CDATA[
+
 
 
 
@@ -116,7 +111,17 @@
 		android:text="Button" />
 
 
+
 	]]>
 	</FrameLayout>
 
-</LinearLayout>
+	<LinearLayout
+		android:layout_width="240dp"
+		android:layout_height="match_parent"
+		android:layout_gravity="start"
+		android:background="@android:color/white"
+		></LinearLayout>
+
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

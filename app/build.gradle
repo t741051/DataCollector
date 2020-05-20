@@ -1,11 +1,11 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 26
+    compileSdkVersion 29
     defaultConfig {
         applicationId "com.mitlab.zusliu.data"
         minSdkVersion 16
-        targetSdkVersion 18
+        targetSdkVersion 29
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -21,4 +21,6 @@ android {
 dependencies {
     implementation files('libs/libusbeaconapp.jar')
     implementation files('libs/thlutil.jar')
+    implementation 'com.google.android.material:material:1.2.0-alpha04'
+
 }

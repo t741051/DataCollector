@@ -559,7 +559,7 @@ public class MainActivity extends Activity implements iBeaconScanManager.OniBeac
             //////////////////////////////////////////////////////
             //choose_one = 0;
             flag_mark_btn[correspod_beacon(major,minor)]=false;
-            change_mark(correspod_beacon(major,minor),0);
+            //change_mark(correspod_beacon(major,minor),0);
         }
 
     }
