@@ -116,11 +116,12 @@
 	</FrameLayout>
 
 	<LinearLayout
+		android:id="@+id/side_menu_LinearLayout"
 		android:layout_width="240dp"
 		android:layout_height="match_parent"
 		android:layout_gravity="start"
 		android:background="@android:color/white"
-		></LinearLayout>
+		android:orientation="horizontal"></LinearLayout>
 
 
 

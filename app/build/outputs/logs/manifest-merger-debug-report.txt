@@ -195,7 +195,7 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Us
 	android:label
 		ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:31:9-41
 	android:icon
-		ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:30:9-43
+		ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:30:9-39
 	android:allowBackup
 		ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:29:9-35
 	android:theme

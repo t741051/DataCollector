@@ -25,11 +25,13 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.util.Log;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.view.View;
 
@@ -48,6 +50,7 @@ import system.config.Setup;
 
 //////////////////////////////////
 import android.view.ViewGroup.LayoutParams;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -77,7 +80,7 @@ public class MainActivity extends Activity implements iBeaconScanManager.OniBeac
     //public Button button;
     FrameLayout frame_1;    //地圖frame
     FrameLayout frame_2;    //按鍵frame
-
+    LinearLayout linear_menu_1;
     public Button btn_1,btn_2,btn_3;  //商家總覽 地點標記 按鍵
     public ImageButton [] img_btn_mark = new ImageButton[15];   //地標按鍵
     public TextView mark_state;
@@ -101,6 +104,7 @@ public class MainActivity extends Activity implements iBeaconScanManager.OniBeac
     static int user_place = 12;
     static int beacon_amount = 11;
     Timer timer = new Timer();;    //宣告一個時間函示
+    final String[] test_string = {"AA", "BB", "CC", "DD", "EE"};
 
     static String mark_state_text = "";
     // TODO 方法：主程式
@@ -137,6 +141,13 @@ public class MainActivity extends Activity implements iBeaconScanManager.OniBeac
         btn_1 = (Button)findViewById(R.id.button3);
         btn_2 = (Button)findViewById(R.id.button4);
         btn_3 = (Button)findViewById(R.id.button5);
+        linear_menu_1 = new LinearLayout(this);
+        linear_menu_1  = (LinearLayout) findViewById(R.id.side_menu_LinearLayout);
+        Spinner spinner = new Spinner(MainActivity.this);
+        ArrayAdapter<String> lunchList = new ArrayAdapter<>(MainActivity.this,
+                android.R.layout.simple_spinner_dropdown_item,
+                test_string);spinner.setAdapter(lunchList);
+        linear_menu_1.addView(spinner);
 
         mark_state = new TextView(this);
 
