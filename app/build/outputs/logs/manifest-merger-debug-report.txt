@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:2:1-47:12
-INJECTED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:2:1-47:12
-INJECTED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:2:1-47:12
-INJECTED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:2:1-47:12
+ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:2:1-53:12
+INJECTED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:2:1-53:12
+INJECTED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:2:1-53:12
+INJECTED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:2:1-53:12
 MERGED from [com.google.android.material:material:1.2.0-alpha04] C:\Users\User\.gradle\caches\transforms-1\files-1.1\material-1.2.0-alpha04.aar\3f43921c8779dfbd3aabe44f74540f40\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\User\.gradle\caches\transforms-1\files-1.1\appcompat-1.1.0.aar\ca8c48cd117b3be6902f5928e76b6c91\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\User\.gradle\caches\transforms-1\files-1.1\cardview-1.0.0.aar\8d173bc7f3d13c8c6afd52c60d03f575\AndroidManifest.xml:17:1-22:12
@@ -31,20 +31,20 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Us
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] C:\Users\User\.gradle\caches\transforms-1\files-1.1\lifecycle-runtime-2.1.0.aar\4dca3d0b14e2e40c74880754c610a115\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\User\.gradle\caches\transforms-1\files-1.1\lifecycle-viewmodel-2.1.0.aar\f518f2fd23783cd57da6b1fc42158d40\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\User\.gradle\caches\transforms-1\files-1.1\annotation-experimental-1.0.0.aar\360eca4d003f1d721ad57b603c6264e7\AndroidManifest.xml:17:1-24:12
-INJECTED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:2:1-47:12
-INJECTED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:2:1-47:12
-INJECTED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:2:1-47:12
+INJECTED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:2:1-53:12
+INJECTED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:2:1-53:12
+INJECTED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:2:1-53:12
 	package
 		ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:3:5-32
 		INJECTED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml
 		INJECTED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml
-		ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:2:1-47:12
+		ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:2:1-53:12
 		INJECTED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml
-		ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:2:1-47:12
+		ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:2:1-53:12
 		INJECTED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:2:11-69
@@ -181,7 +181,7 @@ ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:24:5-26:35
 	android:name
 		ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:25:9-47
 application
-ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:28:5-45:19
+ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:28:5-51:19
 MERGED from [com.google.android.material:material:1.2.0-alpha04] C:\Users\User\.gradle\caches\transforms-1\files-1.1\material-1.2.0-alpha04.aar\3f43921c8779dfbd3aabe44f74540f40\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.2.0-alpha04] C:\Users\User\.gradle\caches\transforms-1\files-1.1\material-1.2.0-alpha04.aar\3f43921c8779dfbd3aabe44f74540f40\AndroidManifest.xml:22:5-20
 MERGED from [androidx.core:core:1.1.0] C:\Users\User\.gradle\caches\transforms-1\files-1.1\core-1.1.0.aar\be9e9abd7ab4b4eab0167d9b0bd520a3\AndroidManifest.xml:24:5-89
@@ -206,17 +206,21 @@ ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:34:9-36:62
 		ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:36:13-59
 	android:name
 		ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:35:13-54
-activity#com.mitlab.zusliu.User.Interface.MainActivity
-ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:38:9-44:20
+activity#com.mitlab.zusliu.User.Interface.WelcomeActivity
+ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:37:9-43:20
 	android:name
-		ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:38:19-62
+		ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:37:19-65
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:39:13-43:29
+ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:38:13-42:29
 action#android.intent.action.MAIN
-ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:40:17-69
+ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:39:17-69
 	android:name
-		ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:40:25-66
+		ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:39:25-66
 category#android.intent.category.LAUNCHER
-ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:42:17-77
+ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:41:17-77
 	android:name
-		ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:42:27-74
+		ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:41:27-74
+activity#com.mitlab.zusliu.User.Interface.MainActivity
+ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:44:9-50:20
+	android:name
+		ADDED from D:\abc\DataCollector\app\src\main\AndroidManifest.xml:44:19-62

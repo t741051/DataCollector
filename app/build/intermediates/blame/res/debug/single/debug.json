@@ -412,6 +412,10 @@
         "source": "C:\\Users\\User\\.gradle\\caches\\transforms-1\\files-1.1\\material-1.2.0-alpha04.aar\\3f43921c8779dfbd3aabe44f74540f40\\res\\drawable\\mtrl_dropdown_arrow.xml"
     },
     {
+        "merged": "D:\\abc\\DataCollector\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_welcome.xml.flat",
+        "source": "D:\\abc\\DataCollector\\app\\src\\main\\res\\layout\\activity_welcome.xml"
+    },
+    {
         "merged": "D:\\abc\\DataCollector\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_search_url_text.xml.flat",
         "source": "C:\\Users\\User\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.1.0.aar\\ca8c48cd117b3be6902f5928e76b6c91\\res\\color\\abc_search_url_text.xml"
     },

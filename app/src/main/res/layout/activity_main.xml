@@ -121,7 +121,14 @@
 		android:layout_height="match_parent"
 		android:layout_gravity="start"
 		android:background="@android:color/white"
-		android:orientation="horizontal"></LinearLayout>
+		android:orientation="horizontal">
+
+		<LinearLayout
+			android:id="@+id/side_layout_1"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:orientation="vertical"></LinearLayout>
+	</LinearLayout>
 
 
 
