@@ -115,11 +115,11 @@ public class MainActivity extends Activity implements iBeaconScanManager.OniBeac
     static int choose_one = 0;    //只讓一個點顯示
 
     static int beacon_in  = 0;
-
+    static int poumadon = 0;
     static int beacon_amount = 11;
 
-    static int cnt_txt_1 = 0;
-    static boolean cnt_txt_2 = false;
+    //static int cnt_txt_1 = 0;
+    //static boolean cnt_txt_2 = false;
     final String [] test_string = {"AA", "BB", "CC", "DD", "EE"};
     static String mark_state_text = "";
     static String result = "";
@@ -523,7 +523,8 @@ public class MainActivity extends Activity implements iBeaconScanManager.OniBeac
             }
         });
     }
-
+    int cnt_txt_1;
+    boolean cnt_txt_2;
     public void change_mark(int x,int state){
         // TODO 方法：選擇第X個 改變圖標 0:黑色 1:紅色
         switch(state){
@@ -533,8 +534,8 @@ public class MainActivity extends Activity implements iBeaconScanManager.OniBeac
                 img_btn_mark[x].getLayoutParams().width = 65;
                 img_btn_mark[x].setImageResource(R.drawable.map_mark);
                 Log.v("e_h_b", String.valueOf(img_btn_mark[x].getLayoutParams().height));
-                cnt_txt_1 = 0;
-                cnt_txt_2 = false;
+               // cnt_txt_1 = 0;
+                //cnt_txt_2 = true;
                 break;
             case 1:
                 Log.v("s_h_r", String.valueOf(img_btn_mark[x].getLayoutParams().height));
@@ -543,14 +544,18 @@ public class MainActivity extends Activity implements iBeaconScanManager.OniBeac
                 img_btn_mark[x].setImageResource(R.drawable.red_map_mark);
                 Log.v("e_h_r", String.valueOf(img_btn_mark[x].getLayoutParams().height));
                 cnt_txt_1 += 1;
-                if(cnt_txt_1 > 2){
+                /*if(cnt_txt_1 > 1){
                     cnt_txt_2 = true;
                 }
-                if(cnt_txt_2){
+
+                if(cnt_txt_2 =true){
                     result = web_info[x];
                     mark_state.setText(result); // 更改顯示文字
+                }*/
+                if(poumadon==0){
+                    result = web_info[x];
+                    mark_state.setText(result);
                 }
-
                 break;
             case 2:
                 img_btn_mark[x].getLayoutParams().height = 65;
@@ -582,11 +587,13 @@ public class MainActivity extends Activity implements iBeaconScanManager.OniBeac
                 if(flag_mark_btn[i] == true){
                     choose_one=1;
                     if(!flag_mark_btn2[i] && !flag_mark_btn3[i])change_mark(i,1);
+                    poumadon =1;
                 }
             }
             if(choose_one == 0){
                 if(!flag_mark_btn2[correspod_beacon(major, minor)] && !flag_mark_btn3[correspod_beacon(major, minor)])change_mark(correspod_beacon(major, minor), 1);
                 flag_mark_btn[correspod_beacon(major, minor)] = true;
+                poumadon = 0;
             }
             choose_one = 0;
 
