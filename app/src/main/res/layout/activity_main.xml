@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
 	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent">
 
@@ -28,14 +29,6 @@
 
 		</LinearLayout>
 
-		<ImageView
-			android:id="@+id/map"
-			android:layout_width="match_parent"
-			android:layout_height="wrap_content"
-			android:layout_marginTop="300px"
-			android:src="@drawable/floor_3rd_2"
-			android:visibility="invisible" />
-
 
 		<FrameLayout
 			android:id="@+id/frame_layout_1"
@@ -49,7 +42,26 @@
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:src="@android:color/transparent" />
+
 		</FrameLayout>
+
+		<ImageView
+			android:id="@+id/imageView"
+			android:layout_width="match_parent"
+			android:layout_height="100dp"
+			android:background="@drawable/text_frame"
+			app:srcCompat="@drawable/text_frame"
+			tools:srcCompat="@drawable/text_frame"
+			tools:visibility="visible" />
+
+		<com.mitlab.zusliu.User.Interface.PaintBoard
+			android:id="@+id/paint_board"
+			android:layout_width="match_parent"
+			android:layout_below="@id/text"
+			android:layout_height="200dp"
+			android:background="@android:color/transparent"/>
+
+
 
 		<FrameLayout
 			android:id="@+id/frame_layout_2"
@@ -100,6 +112,7 @@
 				android:onClick="buttonOnClick_3"
 				android:text="網站導覽"
 				android:visibility="invisible" />
+
 		</FrameLayout><![CDATA[
 
 
@@ -123,11 +136,11 @@
 		android:background="@android:color/white"
 		android:orientation="horizontal">
 
-		<LinearLayout
-			android:id="@+id/side_layout_1"
+
+		<androidx.recyclerview.widget.RecyclerView
+			android:id="@+id/recyclerView_1"
 			android:layout_width="match_parent"
-			android:layout_height="match_parent"
-			android:orientation="vertical"></LinearLayout>
+			android:layout_height="match_parent" />
 	</LinearLayout>
 
 

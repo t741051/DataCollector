@@ -84,12 +84,12 @@
         "source": "C:\\Users\\User\\.gradle\\caches\\transforms-1\\files-1.1\\material-1.2.0-alpha04.aar\\3f43921c8779dfbd3aabe44f74540f40\\res\\layout\\mtrl_calendar_month_navigation.xml"
     },
     {
-        "merged": "D:\\abc\\DataCollector\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_floor_3rd.PNG.flat",
-        "source": "D:\\abc\\DataCollector\\app\\src\\main\\res\\drawable-xxhdpi\\floor_3rd.PNG"
-    },
-    {
         "merged": "D:\\abc\\DataCollector\\app\\build\\intermediates\\res\\merged\\debug\\anim_abc_grow_fade_in_from_bottom.xml.flat",
         "source": "C:\\Users\\User\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.1.0.aar\\ca8c48cd117b3be6902f5928e76b6c91\\res\\anim\\abc_grow_fade_in_from_bottom.xml"
+    },
+    {
+        "merged": "D:\\abc\\DataCollector\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_floor_3rd.PNG.flat",
+        "source": "D:\\abc\\DataCollector\\app\\src\\main\\res\\drawable-xxhdpi\\floor_3rd.PNG"
     },
     {
         "merged": "D:\\abc\\DataCollector\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_ratingbar_small_material.xml.flat",
@@ -408,12 +408,12 @@
         "source": "C:\\Users\\User\\.gradle\\caches\\transforms-1\\files-1.1\\material-1.2.0-alpha04.aar\\3f43921c8779dfbd3aabe44f74540f40\\res\\color\\mtrl_btn_ripple_color.xml"
     },
     {
-        "merged": "D:\\abc\\DataCollector\\app\\build\\intermediates\\res\\merged\\debug\\drawable_mtrl_dropdown_arrow.xml.flat",
-        "source": "C:\\Users\\User\\.gradle\\caches\\transforms-1\\files-1.1\\material-1.2.0-alpha04.aar\\3f43921c8779dfbd3aabe44f74540f40\\res\\drawable\\mtrl_dropdown_arrow.xml"
-    },
-    {
         "merged": "D:\\abc\\DataCollector\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_welcome.xml.flat",
         "source": "D:\\abc\\DataCollector\\app\\src\\main\\res\\layout\\activity_welcome.xml"
+    },
+    {
+        "merged": "D:\\abc\\DataCollector\\app\\build\\intermediates\\res\\merged\\debug\\drawable_mtrl_dropdown_arrow.xml.flat",
+        "source": "C:\\Users\\User\\.gradle\\caches\\transforms-1\\files-1.1\\material-1.2.0-alpha04.aar\\3f43921c8779dfbd3aabe44f74540f40\\res\\drawable\\mtrl_dropdown_arrow.xml"
     },
     {
         "merged": "D:\\abc\\DataCollector\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_search_url_text.xml.flat",
@@ -1234,6 +1234,10 @@
     {
         "merged": "D:\\abc\\DataCollector\\app\\build\\intermediates\\res\\merged\\debug\\layout_mtrl_calendar_months.xml.flat",
         "source": "C:\\Users\\User\\.gradle\\caches\\transforms-1\\files-1.1\\material-1.2.0-alpha04.aar\\3f43921c8779dfbd3aabe44f74540f40\\res\\layout\\mtrl_calendar_months.xml"
+    },
+    {
+        "merged": "D:\\abc\\DataCollector\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_text_frame.png.flat",
+        "source": "D:\\abc\\DataCollector\\app\\src\\main\\res\\drawable-xxhdpi\\text_frame.png"
     },
     {
         "merged": "D:\\abc\\DataCollector\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_ic_star_black_36dp.png.flat",
@@ -2236,6 +2240,10 @@
         "source": "C:\\Users\\User\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.1.0.aar\\ca8c48cd117b3be6902f5928e76b6c91\\res\\layout\\abc_popup_menu_item_layout.xml"
     },
     {
+        "merged": "D:\\abc\\DataCollector\\app\\build\\intermediates\\res\\merged\\debug\\layout_recyclerview_item_view_1.xml.flat",
+        "source": "D:\\abc\\DataCollector\\app\\src\\main\\res\\layout\\recyclerview_item_view_1.xml"
+    },
+    {
         "merged": "D:\\abc\\DataCollector\\app\\build\\intermediates\\res\\merged\\debug\\color_material_slider_thumb_color.xml.flat",
         "source": "C:\\Users\\User\\.gradle\\caches\\transforms-1\\files-1.1\\material-1.2.0-alpha04.aar\\3f43921c8779dfbd3aabe44f74540f40\\res\\color\\material_slider_thumb_color.xml"
     },
@@ -2244,16 +2252,16 @@
         "source": "C:\\Users\\User\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.1.0.aar\\ca8c48cd117b3be6902f5928e76b6c91\\res\\drawable-hdpi-v4\\abc_tab_indicator_mtrl_alpha.9.png"
     },
     {
-        "merged": "D:\\abc\\DataCollector\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_ic_star_black_48dp.png.flat",
-        "source": "C:\\Users\\User\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.1.0.aar\\ca8c48cd117b3be6902f5928e76b6c91\\res\\drawable-xxxhdpi-v4\\abc_ic_star_black_48dp.png"
-    },
-    {
         "merged": "D:\\abc\\DataCollector\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_ic_star_black_16dp.png.flat",
         "source": "C:\\Users\\User\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.1.0.aar\\ca8c48cd117b3be6902f5928e76b6c91\\res\\drawable-xxhdpi-v4\\abc_ic_star_black_16dp.png"
     },
     {
         "merged": "D:\\abc\\DataCollector\\app\\build\\intermediates\\res\\merged\\debug\\color_test_mtrl_calendar_day_selected.xml.flat",
         "source": "C:\\Users\\User\\.gradle\\caches\\transforms-1\\files-1.1\\material-1.2.0-alpha04.aar\\3f43921c8779dfbd3aabe44f74540f40\\res\\color\\test_mtrl_calendar_day_selected.xml"
+    },
+    {
+        "merged": "D:\\abc\\DataCollector\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_ic_star_black_48dp.png.flat",
+        "source": "C:\\Users\\User\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.1.0.aar\\ca8c48cd117b3be6902f5928e76b6c91\\res\\drawable-xxxhdpi-v4\\abc_ic_star_black_48dp.png"
     },
     {
         "merged": "D:\\abc\\DataCollector\\app\\build\\intermediates\\res\\merged\\debug\\layout_mtrl_alert_dialog.xml.flat",
