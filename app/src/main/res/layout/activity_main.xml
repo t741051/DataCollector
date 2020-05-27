@@ -12,19 +12,20 @@
 
 		<LinearLayout
 			android:layout_width="match_parent"
-			android:layout_height="match_parent">
+			android:layout_height="match_parent"
+			android:background="@android:color/black">
 
 			<ListView
 				android:id="@+id/myListView"
 				android:layout_width="match_parent"
 				android:layout_height="607dp"
-				android:background="@android:color/background_dark"
+				android:background="@android:color/white"
 				android:divider="#55FFFFFF"
 				android:dividerHeight="2dp"
 				android:paddingLeft="10dp"
 				android:paddingRight="10dp"
 				android:scrollbars="vertical"
-				android:visibility="visible" />
+				android:visibility="invisible" />
 
 
 		</LinearLayout>

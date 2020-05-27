@@ -231,9 +231,9 @@ public class MainActivity extends Activity implements iBeaconScanManager.OniBeac
                 btn_2.setVisibility(View.INVISIBLE);
                 btn_3.setVisibility(View.INVISIBLE);
                 btn_2_flag = false;
-                btn_2.setBackgroundColor(getResources().getColor(android.R.color.white));
+                btn_2.setBackgroundColor(getResources().getColor(android.R.color.holo_orange_dark));
                 btn_3_flag = false;
-                btn_3.setBackgroundColor(getResources().getColor(android.R.color.white));
+                btn_3.setBackgroundColor(getResources().getColor(android.R.color.holo_orange_dark));
             }
         }
 
@@ -244,12 +244,12 @@ public class MainActivity extends Activity implements iBeaconScanManager.OniBeac
         if(btn_2_flag == false && btn_3_flag == false) {
             connect_to_web(0);
         }
-/*
-        btn_1_flag = !btn_1_flag;
-        if(btn_1_flag) btn_1.setBackgroundColor(getResources().getColor(android.R.color.holo_orange_light));
-        else  btn_1.setBackgroundColor(getResources().getColor(android.R.color.white));
 
- */
+        btn_1_flag = !btn_1_flag;
+        if(btn_1_flag) btn_1.setBackgroundColor(getResources().getColor(android.R.color.holo_orange_dark));
+        else  btn_1.setBackgroundColor(getResources().getColor(android.R.color.holo_orange_dark));
+
+
 
         //connect_to_web(0);
     }
@@ -261,7 +261,7 @@ public class MainActivity extends Activity implements iBeaconScanManager.OniBeac
         if(btn_2_flag){
             btn_2.setBackgroundColor(getResources().getColor(android.R.color.holo_orange_light));
         }
-        else  btn_2.setBackgroundColor(getResources().getColor(android.R.color.white));
+        else  btn_2.setBackgroundColor(getResources().getColor(android.R.color.holo_orange_dark));
 
         //connect_to_web(0);
     }
@@ -275,7 +275,7 @@ public class MainActivity extends Activity implements iBeaconScanManager.OniBeac
             btn_3.setBackgroundColor(getResources().getColor(android.R.color.holo_orange_light));
         }
         else  {
-            btn_3.setBackgroundColor(getResources().getColor(android.R.color.white));
+            btn_3.setBackgroundColor(getResources().getColor(android.R.color.holo_orange_dark));
             for(int i = 0;i < 11;i++) {
                 if (flag_mark_btn[i] == true && flag_mark_btn2[i] == true) {
                     change_mark(i,2);
