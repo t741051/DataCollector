@@ -19,13 +19,13 @@
 				android:id="@+id/myListView"
 				android:layout_width="match_parent"
 				android:layout_height="607dp"
-				android:background="@android:color/white"
+				android:background="@color/design_default_color_on_secondary"
 				android:divider="#55FFFFFF"
 				android:dividerHeight="2dp"
 				android:paddingLeft="10dp"
 				android:paddingRight="10dp"
 				android:scrollbars="vertical"
-				android:visibility="invisible" />
+				android:visibility="visible" />
 
 
 		</LinearLayout>
@@ -135,7 +135,8 @@
 		android:layout_height="match_parent"
 		android:layout_gravity="start"
 		android:background="@android:color/white"
-		android:orientation="horizontal">
+		android:orientation="horizontal"
+		android:visibility="invisible">
 
 
 		<androidx.recyclerview.widget.RecyclerView
