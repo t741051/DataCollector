@@ -18,13 +18,11 @@ import android.os.Vibrator;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.ListView;
-import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -48,8 +46,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import androidx.recyclerview.widget.DividerItemDecoration;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import system.config.Setup;
 
@@ -163,11 +159,14 @@ public class MainActivity extends Activity implements iBeaconScanManager.OniBeac
         btn_3 = (Button)findViewById(R.id.button5);
         linear_menu_1 = new LinearLayout(this);
         linear_menu_1  = (LinearLayout) findViewById(R.id.side_menu_LinearLayout);
+        /*
         Spinner spinner = new Spinner(MainActivity.this);
         ArrayAdapter<String> lunchList = new ArrayAdapter<>(MainActivity.this,
                 android.R.layout.simple_spinner_dropdown_item,
                 test_string);spinner.setAdapter(lunchList);
         linear_menu_1.addView(spinner);
+
+         */
 
         display_mark_btn(beacon_amount);
 ///////////////////////////////////////////////////////////////////////////////////從網頁上抓資料下來並顯示
@@ -193,7 +192,7 @@ public class MainActivity extends Activity implements iBeaconScanManager.OniBeac
         for(int i = 0;i < 10;i++)        {
             Dataset.add(i + "");
         }
-
+/*
         MyAdapter myAdapter = new MyAdapter(myDataset);
         LinearLayoutManager layoutManager = new LinearLayoutManager(this); //設定此 layoutManager 為 linearlayout (類似ListView)
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
@@ -201,6 +200,8 @@ public class MainActivity extends Activity implements iBeaconScanManager.OniBeac
         recyclerView.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL)); //設定分割線
         //recyclerView.setLayoutManager(layoutManager); //設定 LayoutManager
         recyclerView.setAdapter(myAdapter); //設定 Adapter
+
+ */
 
 ///////////////////////////////////////////////////////////////////////////////////
     }
